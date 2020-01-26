@@ -32,9 +32,15 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ## ==== Welcome ====
 ## ==== "this.ajk@gmail.com" ====
-## ==== DataCamp course track - Data Scientist with R ====
-setwd("/Volumes/Data/ajkgd/DS/WS_R/DataCamp/")
+## ==== Set Working Dir ====
+```{r}
+setwd("/Volumes/Data/ajkgd/DS/WS_R/DataCampR/")
+
 getwd()
+```
+
+## ==== DataCamp course track - Data Scientist with R ====
+
 ##  ==== Introduction to R ====
   ##  === Arithmetic
   #An addition``
@@ -1967,7 +1973,7 @@ p + ggtitle("Comparing GDP per capita across continents")
 ## ==== Importing Data in R (Part 1) ====
 ```{r}
 # Import swimming_pools.csv: pools
-pools <- read.csv("swimming_pools.csv",header = TRUE)
+pools <- read.csv("data_dcamp/swimming_pools.csv",header = TRUE)
 
 # Print the structure of pools
 str(pools)
@@ -1976,7 +1982,7 @@ str(pools)
 
 ```{r}
 # Import swimming_pools.csv correctly: pools
-pools <- read.csv("swimming_pools.csv", stringsAsFactors = FALSE)
+pools <- read.csv("data_dcamp/swimming_pools.csv", stringsAsFactors = FALSE)
 
 # Check the structure of pools
 str(pools)
@@ -1984,7 +1990,7 @@ str(pools)
 
 ```{r}
 # Import hotdogs.txt: hotdogs
-hotdogs <- read.delim("hotdogs.txt" , header = FALSE)
+hotdogs <- read.delim("data_dcamp/hotdogs.txt" , header = FALSE)
 
 # Summarize hotdogs
 summary(hotdogs)
@@ -1992,7 +1998,7 @@ summary(hotdogs)
 
 ```{r}
 # Path to the hotdogs.txt file: path
-path <- file.path("C:/Users/CPPAJK/ajkgd/DS/WS_R/Rproject1", "hotdogs.txt")
+path <- file.path("data_dcamp/", "hotdogs.txt")
 
 # Import the hotdogs.txt file: hotdogs
 hotdogs <- read.table(path, 
@@ -2005,7 +2011,7 @@ head(hotdogs)
 
 ```{r}
 # Finish the read.delim() call
-hotdogs <- read.delim("hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
+hotdogs <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
 
 # Select the hot dog with the least calories: lily
 lily <- hotdogs[which.min(hotdogs$calories), ]
@@ -2021,13 +2027,13 @@ tom
 
 ```{r}
 # Previous call to import hotdogs.txt
-hotdogs <- read.delim("hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
+hotdogs <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
 
 # Display structure of hotdogs
 str(hotdogs)
 
 # Edit the colClasses argument to import the data correctly: hotdogs2
-hotdogs2 <- read.delim("hotdogs.txt", header = FALSE, 
+hotdogs2 <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, 
                        col.names = c("type", "calories", "sodium"),
                        colClasses = c("factor","NULL","numeric"))
 
@@ -2044,7 +2050,7 @@ properties <- c("area", "temp", "size", "storage", "method",
                 "texture", "flavor", "moistness")
 
 # Import potatoes.txt: potatoes
-potatoes <- read_tsv("potatoes.txt", col_names = properties)
+potatoes <- read_tsv("data_dcamp/potatoes.txt", col_names = properties)
 
 # Call head() on potatoes
 head(potatoes)
@@ -2058,7 +2064,7 @@ properties <- c("area", "temp", "size", "storage", "method",
                 "texture", "flavor", "moistness")
 
 # Import potatoes.txt using read_delim(): potatoes
-potatoes <- read_delim("potatoes.txt", delim = "\t", col_names = properties)
+potatoes <- read_delim("data_dcamp/potatoes.txt", delim = "\t", col_names = properties)
 
 # Print out potatoes
 potatoes
@@ -2072,7 +2078,7 @@ properties <- c("area", "temp", "size", "storage", "method",
                 "texture", "flavor", "moistness")
 
 # Import 5 observations from potatoes.txt: potatoes_fragment
-potatoes_fragment <- read_tsv("potatoes.txt", skip = 6, n_max = 5, col_names = properties)
+potatoes_fragment <- read_tsv("data_dcamp/potatoes.txt", skip = 6, n_max = 5, col_names = properties)
 ```
 
 ```{r}
@@ -2083,7 +2089,7 @@ properties <- c("area", "temp", "size", "storage", "method",
                 "texture", "flavor", "moistness")
 
 # Import all data, but force all columns to be character: potatoes_char
-potatoes_char <- read_tsv("potatoes.txt", col_types = "cccccccc", col_names = properties)
+potatoes_char <- read_tsv("data_dcamp/potatoes.txt", col_types = "cccccccc", col_names = properties)
 
 # Print out structure of potatoes_char
 str(potatoes_char)
@@ -2093,7 +2099,7 @@ str(potatoes_char)
 # readr is already loaded
 
 # Import without col_types
-hotdogs <- read_tsv("hotdogs.txt", col_names = c("type", "calories", "sodium"))
+hotdogs <- read_tsv("data_dcamp/hotdogs.txt", col_names = c("type", "calories", "sodium"))
 
 # Display the summary of hotdogs
 summary(hotdogs)
@@ -2103,7 +2109,7 @@ fac <- col_factor(levels = c("Beef", "Meat", "Poultry"))
 int <- col_integer()
 
 # Edit the col_types argument to import the data correctly: hotdogs_factor
-hotdogs_factor <- read_tsv("hotdogs.txt",
+hotdogs_factor <- read_tsv("data_dcamp/hotdogs.txt",
                            col_names = c("type", "calories", "sodium"),
                            col_types = list(fac,int,int))
 
@@ -2117,7 +2123,7 @@ summary(hotdogs_factor)
 library(data.table)
 
 # Import potatoes.csv with fread(): potatoes
-potatoes <- fread("potatoes.csv")
+potatoes <- fread("data_dcamp/potatoes.csv")
 
 # Print out potatoes
 potatoes
@@ -2127,7 +2133,7 @@ potatoes
 # fread is already loaded
 
 # Import columns 6 and 8 of potatoes.csv: potatoes
-potatoes <- fread("potatoes.csv", select = c(6,8) )
+potatoes <- fread("data_dcamp/potatoes.csv", select = c(6,8) )
 
 # Plot texture (x) and moistness (y) of potatoes
 plot(potatoes$texture, potatoes$moistness)
@@ -2138,16 +2144,16 @@ plot(potatoes$texture, potatoes$moistness)
 library(readxl)
 
 # Print the names of all worksheets
-excel_sheets("urbanpop.xlsx")
+excel_sheets("data_dcamp/urbanpop.xlsx")
 ```
 
 ```{r}
 # The readxl package is already loaded
 
 # Read the sheets, one by one
-pop_1 <- read_excel("urbanpop.xlsx", sheet = 1)
-pop_2 <- read_excel("urbanpop.xlsx", sheet = 2)
-pop_3 <- read_excel("urbanpop.xlsx", sheet = 3)
+pop_1 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 1)
+pop_2 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 2)
+pop_3 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 3)
 
 # Put pop_1, pop_2 and pop_3 in a list: pop_list
 pop_list <- list(pop_1, pop_2, pop_3)
@@ -2160,7 +2166,7 @@ str(pop_list)
 # The readxl package is already loaded
 
 # Read all Excel sheets with lapply(): pop_list
-pop_list <- lapply(excel_sheets("urbanpop.xlsx"),read_excel, path = "urbanpop.xlsx") 
+pop_list <- lapply(excel_sheets("data_dcamp/urbanpop.xlsx"),read_excel, path = "data_dcamp/urbanpop.xlsx") 
 
 # Display the structure of pop_list
 str(pop_list)
@@ -2170,7 +2176,7 @@ str(pop_list)
 # The readxl package is already loaded
 
 # Import the second sheet of urbanpop.xlsx, skipping the first 21 rows: urbanpop_sel
-urbanpop_sel <- read_excel("urbanpop.xlsx", sheet = 2, col_names = FALSE, skip = 21)
+urbanpop_sel <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 2, col_names = FALSE, skip = 21)
 
 # Print out the first observation from urbanpop_sel
 head(urbanpop_sel, n = 1)
@@ -2183,7 +2189,7 @@ head(urbanpop_sel, n = 1)
 library(gdata)
 
 # Import the second sheet of urbanpop.xls: urban_pop
-urban_pop <- read.xls("urbanpop.xls", sheet = 2)
+urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2)
 
 # Print the first 11 observations using head()
 head(urban_pop, n=11)
@@ -2196,7 +2202,7 @@ head(urban_pop, n=11)
 columns <- c("country", paste0("year_", 1967:1974))
 
 # Finish the read.xls call
-urban_pop <- read.xls("urbanpop.xls", sheet = 2,
+urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2,
                       skip = 50, header = FALSE, stringsAsFactors = FALSE,
                       col.names = columns)
 
@@ -2211,7 +2217,7 @@ library(gdata)
 columns <- c("country", paste0("year_", 1967:1974))
 
 # Finish the read.xls call
-urban_pop <- read.xls("urbanpop.xls", sheet = 2,
+urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2,
                       skip = 50, header = FALSE, stringsAsFactors = FALSE,
                       col.names = columns)
 
@@ -2221,7 +2227,7 @@ head(urban_pop, n=10)
 
 ```{r}
 # Add code to import data from all three sheets in urbanpop.xls
-path <- "urbanpop.xls"
+path <- "data_dcamp/urbanpop.xls"
 urban_sheet1 <- read.xls(path, sheet = 1, stringsAsFactors = FALSE)
 urban_sheet2 <- read.xls(path, sheet = 2, stringsAsFactors = FALSE)
 urban_sheet3 <- read.xls(path, sheet = 3, stringsAsFactors = FALSE)
@@ -2253,7 +2259,7 @@ library(XLConnect)
 library(XLConnect)
 
 # Build connection to urbanpop.xlsx: my_book
-my_book <- loadWorkbook("urbanpop.xlsx")
+my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # Print out the class of my_book
 class(my_book)
@@ -2263,7 +2269,7 @@ class(my_book)
 # XLConnect is already available
 
 # Build connection to urbanpop.xlsx
-my_book <- loadWorkbook("urbanpop.xlsx")
+my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # List the sheets in my_book
 getSheets(my_book)
@@ -2276,7 +2282,7 @@ readWorksheet(my_book,2)
 # XLConnect is already available
 
 # Build connection to urbanpop.xlsx
-my_book <- loadWorkbook("urbanpop.xlsx")
+my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # List the sheets in my_book
 getSheets(my_book)
@@ -2289,10 +2295,10 @@ readWorksheet(my_book,2)
 # XLConnect is already available
 
 # Build connection to urbanpop.xlsx
-my_book <- loadWorkbook("urbanpop.xlsx")
+my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # Add a worksheet to my_book, named "data_summary"
-createSheet(my_book, "data_summary")
+createSheet(my_book, "data_dcamp/data_summary")
 
 # Use getSheets() on my_book
 getSheets(my_book)
@@ -2302,7 +2308,7 @@ getSheets(my_book)
 # XLConnect is already available
 
 # Build connection to urbanpop.xlsx
-my_book <- loadWorkbook("urbanpop.xlsx")
+my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # Add a worksheet to my_book, named "data_summary"
 createSheet(my_book, "data_summary")
@@ -2319,8 +2325,8 @@ getSheets(my_book)
 writeWorksheet(my_book,summ, sheet = "data_summary")
 
 # Save workbook as summary.xlsx
-saveWorkbook(my_book,"summary.xlsx")
-loadWorkbook("summary.xlsx")
+saveWorkbook(my_book,"data_dcamp/summary.xlsx")
+loadWorkbook("data_dcamp/summary.xlsx")
 ```
 
 ```{r}
@@ -2333,8 +2339,8 @@ renameSheet(my_book, sheet = 4, "summary")
 my_book
 getSheets(my_book)
 # Save workbook to "renamed.xlsx"
-saveWorkbook(my_book,"renamed.xlsx")
-loadWorkbook("renamed.xlsx")
+saveWorkbook(my_book,"data_dcamp/renamed.xlsx")
+loadWorkbook("data_dcamp/renamed.xlsx")
 ```
 
 ```{r}
@@ -2342,14 +2348,14 @@ loadWorkbook("renamed.xlsx")
 library(XLConnect)
 
 # Build connection to renamed.xlsx: my_book
-my_book <- loadWorkbook("renamed.xlsx")
+my_book <- loadWorkbook("data_dcamp/renamed.xlsx")
 
 # Remove the fourth sheet
 removeSheet(my_book,sheet = 4)
 
 # Save workbook to "clean.xlsx"
-saveWorkbook(my_book, "clean.xlsx")
-loadWorkbook("clean.xlsx")
+saveWorkbook(my_book, "data_dcamp/clean.xlsx")
+loadWorkbook("data_dcamp/clean.xlsx")
 ```
 
 ## ==== Importing Data in R (Part 2) ====
@@ -2814,5 +2820,46 @@ tail(weather_clean)
 
 # View a condensed summary of the data
 str(weather_clean)
+```
+
+```{r}
+library(dplyr)
+world_bmi <- read.delim("data_bmi/NCD_RisC_Lancet_2017_BMI_age_standardised_world.txt", header = TRUE, sep=",")
+world_bmi <- read.csv("data_bmi/BMI.csv")
+world_bmi
+class(world_bmi)
+dim(world_bmi)
+names(world_bmi)
+str(world_bmi)
+glimpse(world_bmi)
+summary(world_bmi)
+```
+
+```{r}
+## plot
+hist(world_bmi$Mean.BMI)
+```
+
+```{r}
+dim(world_bmi)
+head(world_bmi, n = 6)
+tail(world_bmi, n = 6)
+```
+
+```{r}
+# Histogram of BMIs from 2008
+hist(world_bmi$Mean.BMI)
+
+# Scatter plot comparing BMIs from 1980 to those from 2008
+plot(world_bmi$Mean.BMI, world_bmi$Mean.BMI)
+```
+
+```{r}
+library(tidyr)
+world_bmi_kf_model <- spread(world_bmi,Year,Mean.BMI)
+world_bmi_kf_model
+
+world_bmi_ac_model <- gather(world_bmi_kf_model,key = "Year", value = "Mean.BMI", -Country.Region.World,-Sex)
+world_bmi_ac_model
 ```
 
