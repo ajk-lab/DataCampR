@@ -1205,6 +1205,7 @@ getwd()
     x[1]
   }
 ## ==== Apply ====
+```{r}
   # Apply select_first() over split_low: names
   names <- lapply(split_low,select_first)
   names
@@ -1212,13 +1213,13 @@ getwd()
   select_second <- function(x){
     x[2]
   }
+```
   
-  
-  
+```{r} 
   # Apply select_second() over split_low: years
   years <- lapply(split_low,select_second)  
   years
-  
+```  
   
   # split_low has been created for you
   split_low
@@ -2298,7 +2299,7 @@ readWorksheet(my_book,2)
 my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
 
 # Add a worksheet to my_book, named "data_summary"
-createSheet(my_book, "data_dcamp/data_summary")
+createSheet(my_book, "data_summary")
 
 # Use getSheets() on my_book
 getSheets(my_book)
@@ -2500,7 +2501,7 @@ url_xls <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/d
 excel_gdata <- read.xls(url_xls)
 
 # Download file behind URL, name it local_latitude.xls
-download.file(url_xls,"local_latitude.xls")
+download.file(url_xls,"data_dcamp/local_latitude.xls")
 
 # Import the local .xls file with readxl: excel_readxl
 
@@ -2517,24 +2518,24 @@ url_xls <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/d
 excel_gdata <- read.xls(url_xls)
 
 # Download file behind URL, name it local_latitude.xls
-download.file(url_xls,"local_latitude.xls")
+download.file(url_xls,"data_dcamp/local_latitude.xls")
 
 # Import the local .xls file with readxl: excel_readxl
-excel_readxl <- read_excel("local_latitude.xls")
+excel_readxl <- read_excel("data_dcamp/local_latitude.xls")
 ```
 
 ```{r}
 # https URL to the wine RData file.
-url_rdata <- "https://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/wine.RData"
+##url_rdata <- "https://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/wine.RData"
 
 # Download the wine file to your working directory
-download.file(url_rdata,"wine_local.RData")
+##download.file(url_rdata,"data_dcamp/wine_local.RData")
 
 # Load the wine data into your workspace using load()
-load("wine_local.RData")
+##load("wine_local.RData")
 
 # Print out the summary of the wine data
-summary(wine)
+##summary(wine)
 
 ```
 
@@ -2685,7 +2686,7 @@ mini_json
 library(haven)
 
 # Import sales.sas7bdat: sales
-sales <- read_sas("sales.sas7bdat")
+sales <- read_sas("data_dcamp/sales.sas7bdat")
 
 # Display the structure of sales
 str(sales)
@@ -2719,7 +2720,7 @@ ggplot(trade, aes(x = trade$Weight_I, y = trade$Import)) + geom_point()
 
 # Import person.sav: traits
 
-traits <- read_sav("person.sav")
+traits <- read_sav("data_dcamp/person.sav")
 
 # Summarize traits
 summary(traits)
@@ -2733,7 +2734,7 @@ subset(traits, Extroversion > 40 & Agreeableness > 40)
 library(foreign)
 
 # Import florida.dta and name the resulting data frame florida
-florida <- read.dta("florida.dta")
+florida <- read.dta("data_dcamp/florida.dta")
 
 # Check tail() of florida
 tail(florida)
@@ -2743,7 +2744,7 @@ tail(florida)
 # foreign is already loaded
 
 # Specify the file path using file.path(): path
-path <- file.path("edequality.dta")
+path <- file.path("data_dcamp/edequality.dta")
 
 # Create and print structure of edu_equal_1
 edu_equal_1 <- read.dta(path)
@@ -2772,7 +2773,7 @@ nrow(subset(edu_equal_1,ethnicity_head =="Bulgaria" & income > 1000))
 # foreign is already loaded
 
 # Import international.sav as a data frame: demo
-demo <- read.spss("international.sav",to.data.frame = TRUE)
+demo <- read.spss("data_dcamp/international.sav",to.data.frame = TRUE)
 demo$gdp
 # Create boxplot of gdp variable of demo
 boxplot(demo$gdp)
@@ -2786,13 +2787,13 @@ cor(demo$gdp,demo$f_illit)
 # foreign is already loaded
 
 # Import international.sav as demo_1
-demo_1 <- read.spss("international.sav", to.data.frame = TRUE)
+demo_1 <- read.spss("data_dcamp/international.sav", to.data.frame = TRUE)
 
 # Print out the head of demo_1
 head(demo_1)
 
 # Import international.sav as demo_2
-demo_2 <- read.spss("international.sav", to.data.frame = TRUE, as_factor=FALSE, use.value.labels = FALSE)
+demo_2 <- read.spss("data_dcamp/international.sav", to.data.frame = TRUE, as_factor=FALSE, use.value.labels = FALSE)
 
 # Print out the head of demo_2
 head(demo_2)
@@ -2802,24 +2803,24 @@ head(demo_2)
 
 ```{r}
 # View the first 6 rows of data
-head(weather)
+##head(weather)
 
 # View the last 6 rows of data
-tail(weather)
+##tail(weather)
 
 # View a condensed summary of the data
-str(weather)
+##str(weather)
 ```
 
 ```{r}
 # View the first 6 rows of data
-head(weather_clean)
+##head(weather_clean)
 
 # View the last 6 rows of data
-tail(weather_clean)
+##tail(weather_clean)
 
 # View a condensed summary of the data
-str(weather_clean)
+##str(weather_clean)
 ```
 
 ```{r}
@@ -2861,5 +2862,135 @@ world_bmi_kf_model
 
 world_bmi_ac_model <- gather(world_bmi_kf_model,key = "Year", value = "Mean.BMI", -Country.Region.World,-Sex)
 world_bmi_ac_model
+```
+
+```{r}
+country_bmi <- read.csv("data_bmi/BMI_Country.csv")
+class(country_bmi)
+dim(country_bmi)
+str(country_bmi)
+glimpse(country_bmi)
+head(country_bmi)
+```
+
+```{r}
+# Apply separate() to bmi_cc
+country_bmi_unite <- unite(country_bmi,Country_ISO,Country.Region.World,ISO)
+head(country_bmi_unite)
+country_bmi_separate <- separate(country_bmi_unite, col = Country_ISO, into = c("Country", "ISO"), sep = "_")
+
+# Print the head of the result
+head(country_bmi_separate)
+```
+
+```{r}
+# View the head of census
+usa_census_sample <- read.csv("usa census sample/census-demo ex1.csv")
+head(usa_census_sample)
+str(usa_census_sample)
+# Gather the month columns
+usa_census_sample_2 <- gather(usa_census_sample,Year,Pop,-ZCTA,-State,-Pop_Density)
+
+# Arrange rows by YEAR using dplyr's arrange
+usa_census_sample_clean <- separate(usa_census_sample_2,Year,into=c("Text","Year"),sep = "_")
+
+select(usa_census_sample_clean,-c(Text))
+# View first 20 rows of census2_arr
+head(usa_census_sample_clean, n = 20)
+
+```
+
+```{r}
+# View first 50 rows of census_long
+head(usa_census_sample_clean, n = 50)
+
+# Spread the type column
+usa_census_sample_clean_2 <- spread(usa_census_sample_clean,Year,Pop)
+
+# View first 20 rows of census_long2
+head(usa_census_sample_clean_2,n = 20)
+select(usa_census_sample_clean_2,-c(Text))
+```
+
+```{r}
+# Make this evaluate to "character"
+class("TRUE")
+
+# Make this evaluate to "numeric"
+class(8484.00)
+
+# Make this evaluate to "integer"
+class(99L)
+
+# Make this evaluate to "factor"
+class(factor("factor"))
+
+# Make this evaluate to "logical"
+class(FALSE)
+```
+
+```{r}
+# Preview students with str()
+students <- read.csv("Cleaning Data in R/Students.csv")
+str(students)
+
+# Coerce Grades to character
+students$Grades <- as.character(students$Grades)
+
+# Coerce Medu to factor
+students$Medu <- as.factor(students$Medu)
+
+# Coerce Fedu to factor
+students$Fedu <- as.factor(students$Fedu)
+    
+# Look at students once more with str()
+str(students)
+```
+
+```{r}
+# Preview students2 with str()
+students2 <- read.csv("Cleaning Data in R/Students2.csv")
+str(students2)
+head(students2)
+# Load the lubridate package
+library(lubridate)
+
+# Parse as date
+dmy("17 Sep 2015")
+
+# Parse as date and time (with no seconds!)
+mdy_hm("July 15, 2012 12:56")
+
+# Coerce dob to a date (with no time)
+students2$dob <- dmy(students2$dob) 
+
+# Coerce nurse_visit to a date and time
+students2$nurse_visit <- ymd_hms(students2$nurse_visit)
+    
+# Look at students2 once more with str()
+str(students2)
+```
+
+```{r}
+# Load the stringr package
+library(stringr)
+
+# Trim all leading and trailing whitespace
+str_trim(c("   Filip ", "Nick  ", " Jonathan"))
+
+# Pad these strings with leading zeros
+str_pad(c("23485W", "8823453Q", "994Z"),width = 9, side = "left", pad = "0")
+
+```
+
+```{r}
+# Print state abbreviations
+states <- read.csv("Cleaning Data in R/States.csv")
+
+# Make states all uppercase and save result to states_upper
+states_upper <- toupper(states)
+
+# Make states_upper all lowercase again
+tolower(states_upper)
 ```
 
