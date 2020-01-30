@@ -42,6 +42,7 @@ getwd()
 ## ==== DataCamp course track - Data Scientist with R ====
 
 ##  ==== Introduction to R ====
+```{r}
   ##  === Arithmetic
   #An addition``
   5 + 5 
@@ -117,8 +118,10 @@ getwd()
   
   # Check class of my_logical
   class(my_logical)
+```
 
 ##  ==== Vector ====
+``` {r}
   # Define the variable vegas
   vegas <- "Go!"
   vegas
@@ -312,9 +315,10 @@ getwd()
   # Select from roulette_vector these days
   roulette_winning_days <- roulette_vector[selection_vector]
   roulette_winning_days
-
+```
 
 ##  ==== Matrix ====
+``` {r}
   # Construct a matrix with 3 rows that contain the numbers 1 up to 9
   matrix(1:9, byrow = TRUE)
   matrix(1:9, byrow = TRUE, nrow = 3)
@@ -543,8 +547,10 @@ getwd()
   da5
   # Is data analyst 2 faster than data analyst 5?
   da2 < da5
+```
 
 ##  ==== Data frame ====
+``` {r}
   # Print out built-in R data frame
   mtcars
   class(mtcars)
@@ -620,8 +626,10 @@ getwd()
   positions
   # Use positions to sort planets_df
   planets_df[positions,]
+```
 
 ##  ==== List ====
+```{r}
   # An R list is an object consisting of an ordered collection of objects known as its components.
   
   # There is no particular need for the components to be of the same mode or type, and, for example, 
@@ -704,6 +712,8 @@ getwd()
   # Have a look at shining_list_full
   shining_list_full
   str(shining_list_full)
+```
+
 
 ## ==== Intermideate R ====
 # ==== Conditionals and Control Flow ====
@@ -1204,6 +1214,7 @@ getwd()
   select_first <- function(x) {
     x[1]
   }
+  
 ## ==== Apply ====
 ```{r}
   # Apply select_first() over split_low: names
@@ -1220,7 +1231,7 @@ getwd()
   years <- lapply(split_low,select_second)  
   years
 ```  
-  
+```{r}  
   # split_low has been created for you
   split_low
   
@@ -1231,8 +1242,9 @@ getwd()
   
   years <- lapply(split_low, function(x){x[2]})
   years
-  
-  
+```
+
+```{r}  
   # Definition of split_low
   pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
   split <- strsplit(pioneers, split = ":")
@@ -1253,8 +1265,9 @@ getwd()
   lapply(list(1,"a", TRUE), str)  
   
   split_low  
-  
-  
+```
+
+```{r}  
   # Temp
   temp <- list(c(3,  7,  9,  6, -1), c(6,  9, 12, 13,  5), c(4,  8,  3, -1, -3),c(1,  4,  7,  2, -2),
                c(5, 7, 9, 4, 2), c(-3,  5,  8,  9,  4), c(3, 6, 9, 4, 1))
@@ -1274,7 +1287,9 @@ getwd()
   
   # Use sapply() to find each day's maximum temperature
   sapply(temp,max)  
-  
+```
+
+```{r}
   # temp is already defined in the workspace
   temp
   # Finish function definition of extremes_avg
@@ -1301,7 +1316,9 @@ getwd()
   # Apply extremes() over temp with lapply()
   lapply(temp,extremes)
   
-  
+```
+
+```{r}
   # temp is already prepared for you in the workspace
   temp
   # Definition of below_zero()
@@ -1317,8 +1334,9 @@ getwd()
   freezing_l
   # Are freezing_s and freezing_l identical?
   identical(freezing_s,freezing_s)
+```  
   
-  
+```{r}  
   # temp is already available in the workspace
   temp
   # Definition of print_info()
@@ -1333,7 +1351,9 @@ getwd()
   lapply(temp,print_info)
   
   runif (10)
-  
+```
+
+```{r}
   # temp is already available in the workspace
   temp
   # Definition of basics()
@@ -1343,7 +1363,9 @@ getwd()
   
   # Apply basics() over temp using vapply()
   vapply(temp,basics,numeric(3))
-  
+```
+
+```{r}
   # temp is already available in the workspace
   temp
   str(temp)
@@ -1354,7 +1376,9 @@ getwd()
   
   # Fix the error:
   vapply(temp, basics, numeric(4))
-  
+```
+
+```{r}
   # temp is already defined in the workspace
   
   # Convert to vapply() expression
@@ -1375,7 +1399,9 @@ getwd()
   
   # Fix the error
   mean(c(vec1,vec2))
-  
+```
+
+```{r}
   # The linkedin and facebook lists have already been created for you
   linkedin <- list(16, 9, 13, 5, 2, 17, 14)
   facebook <- list(17, 7, 5, 16, 8, 13, 14)
@@ -1401,7 +1427,11 @@ getwd()
   seq2
   # Calculate total sum of the sequences
   sum(c(seq1,seq2))
+  
+```  
+
 ## ==== Regular Expression ====
+```{r}  
   # The emails vector has already been defined for you
   emails <- c("john.doe@ivyleague.edu", "education@world.gov", "dalai.lama@peace.org",
               "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
@@ -1572,9 +1602,11 @@ getwd()
   
   # Calculate the average time online
   mean(time_online)  
+```
 
 ## ==== Introduction to the Tidyverse ====
 ## ==== Data wrangling ====
+```{r}
   # install.packages("gapminder")
 
   # Load the gapminder package
@@ -1640,9 +1672,10 @@ getwd()
     mutate (lifeExpMonths = lifeExp * 12) %>%
     filter(year == 2007) %>%
     arrange(desc(lifeExpMonths))
-
+```
 
 ## ==== ggplot ====
+```{r}
   # Load the ggplot2 package as well
   library(gapminder)
   library(dplyr)
@@ -1737,7 +1770,8 @@ getwd()
   
   # Scatter plot comparing pop and lifeExp, faceted by continent
   ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) + geom_point() + scale_x_log10() + facet_wrap(~continent)
-  
+```
+
 ```{r}
   library(gapminder)
   library(dplyr)
@@ -3232,5 +3266,118 @@ hist(weather6$Min.TemperatureF)
 
 # Compare to histogram for Mean.TemperatureF
 hist(weather6$Mean.TemperatureF)
+```
+
+## ==== Importing & Cleaning Data in R: Case Studies ====
+```{r}
+sales <- read.csv("ImportingCleaningDatainRCaseStudies/Sales.csv", stringsAsFactors = FALSE)
+```
+
+```{r}
+# View dimensions of sales
+dim(sales)
+
+# Inspect first 6 rows of sales
+head(sales, n = 6)
+
+# View column names of sales
+names(sales)
+```
+
+```{r}
+# Look at structure of sales
+str(sales)
+
+# View a summary of sales
+summary(sales)
+
+# Load dplyr
+library(dplyr)
+
+# Get a glimpse of sales
+glimpse(sales)
+```
+
+```{r}
+##sales2 <- sales[-(1:1),] #omit first from sales
+sales2 <- sales[,-1]
+glimpse(sales2)
+
+sales3 <- sales[,-4] # omit 4th column
+glimpse(sales3)
+```
+
+```{r}
+# Define a vector of column indices: keep
+keep <- c(5:(length(sales2)-15))
+
+dim(sales2)
+class(keep)
+dim(keep)
+str(keep)
+# Subset sales2 using keep: sales3
+sales3 = sales2[keep]
+sales3
+str(sales3)
+```
+
+```{r}
+# Load tidyr
+library(tidyr)
+
+# Split event_date_time: sales4
+str(sales3)
+sales4 <- separate(sales3, event_date_time,into=c("event_dt","event_time"), sep =" ")
+head(sales4)
+# Split sales_ord_create_dttm: sales5
+head(sales4$sales_ord_create_dttm)
+sales5 <- separate(sales4, sales_ord_create_dttm,into=c("ord_create_dt","ord_create_time"), sep =" ")
+
+
+# Define an issues vector
+issues <- c(2516,3863,4082,4183)
+
+# Print values of sales_ord_create_dttm at these indices
+sales3$sales_ord_create_dttm[issues]
+
+# Print a well-behaved value of sales_ord_create_dttm
+sales3$sales_ord_create_dttm[2517]
+```
+
+```{r}
+# Load stringr
+library(stringr)
+
+# Find columns of sales5 containing "dt": date_cols
+date_cols <- str_detect(names(sales5), "dt")
+
+# Load lubridate
+library(lubridate)
+
+# Coerce date columns into Date objects
+sales5[, date_cols] <- lapply(sales5[, date_cols], ymd)
+```
+
+```{r}
+# Find date columns (don't change)
+date_cols <- str_detect(names(sales5), "dt")
+
+# Create logical vectors indicating missing values (don't change)
+missing <- lapply(sales5[, date_cols], is.na)
+head(missing , n = 5)
+# Create a numerical vector that counts missing values: num_missing
+num_missing <- sapply(missing, sum)
+
+# Print num_missing
+num_missing
+```
+
+```{r}
+# Combine the venue_city and venue_state columns
+sales6 <- unite(sales5, venue_city_state,venue_city, venue_state,sep = ", ")
+
+
+# View the head of sales6
+head(sales6, n =6)
 ```
 
