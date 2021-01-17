@@ -1,0 +1,2975 @@
+# ==== Welcome ====
+  #  "this.ajk@gmail.com"
+## EOB Welcome
+  
+# ==== Set Working Dir ==== 
+  dir = "D:/ajkgd/ajk-lab/WsDataCampR/"
+  setwd(dir)
+  getwd()
+## EOB Set Working Dir
+ 
+  
+  
+# ==== DataCamp course track - Data Scientist with R ====
+## EOB Data Scientist with R   
+  
+# ==== Introduction to R ====
+## EOB
+
+# ==== Intro to basics ====
+  ## An addition
+  5 + 5 
+  
+  ## A subtraction
+  5 - 5 
+  
+  ## A multiplication
+  3 * 5
+  
+  ## A division
+  (5 + 5) / 2 
+  
+  ## Exponentiation
+  2^5
+  
+  ## Modulo
+  28%%6
+  
+  ## Assign the value 42 to x
+  x <- 42
+  
+  ## Print out the value of the variable x
+  x
+  
+  ## Assign the value 5 to the variable my_apples
+  my_apples <- 5
+  
+  ## Assignment in R
+  ## Notice that the assignment operator (‘<-’), which consists of the two characters ‘<’ (“less than”) 
+  ## and ‘-’ (“minus”) occurring strictly side-by-side and it ‘points’ to the object receiving the 
+  ## value of the expression. In most contexts the ‘=’ operator can be used as an alternative.
+  
+  ## Assignment can also be made using the function assign(). An equivalent way of making the same 
+  ## assignment as above is with:
+  assign("my_apples",6)
+  my_apples
+  
+  
+  ## Print out the value of the variable my_apples
+  my_apples
+  
+  ## Assign a value to the variables my_apples and my_oranges
+  my_apples <- 5
+  my_oranges <- 6
+  
+  ## Add these two variables together
+  my_apples + my_oranges
+  
+  ## Create the variable my_fruit
+  my_fruit <- (my_apples + my_oranges)
+  
+  ## Assign a value to the variable my_apples
+  my_apples <- 5 
+  
+  ## Fix the assignment of my_oranges
+  my_oranges <- 6 
+  
+  ## Create the variable my_fruit and print it out
+  my_fruit <- my_apples + my_oranges 
+  my_fruit
+  
+  ## Change my_numeric to be 42
+  my_numeric <- 42
+  
+  ## Change my_character to be "universe"
+  my_character <- "universe"
+  
+  ## Change my_logical to be FALSE
+  my_logical <- FALSE
+  
+  ## Declare variables of different types
+  my_numeric <- 42
+  my_character <- "universe"
+  my_logical <- FALSE 
+  
+  ## Check class of my_numeric
+  class(my_numeric)
+  
+  ## Check class of my_character
+  class(my_character)
+  
+  ## Check class of my_logical
+  class(my_logical)
+  
+##EOB Intro to basics
+  
+# ==== Vector ====
+  ## Define the variable vegas
+  vegas <- "Go!"
+  vegas
+  
+  numeric_vector <- c(1, 10, 49)
+  numeric_vector
+  
+  character_vector <- c("a", "b", "c")
+  character_vector
+  
+  ## Complete the code for boolean_vector
+  boolean_vector <-c(TRUE,FALSE,TRUE)
+  boolean_vector
+  
+  ## Poker winnings from Monday to Friday
+  poker_vector <- c(140, -50, 20, -120, 240)
+  poker_vector
+  
+  ## Roulette winnings from Monday to Friday
+  roulette_vector <- c(-24, -50, 100, -350, 10)  
+  roulette_vector
+  
+  ## Poker winnings from Monday to Friday
+  poker_vector <- c(140, -50, 20, -120, 240)
+  
+  ## Roulette winnings from Monday to Friday
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  
+  ## Assign days as names of poker_vector
+  names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  poker_vector
+  
+  ## Assign days as names of roulette_vectors
+  names(roulette_vector) <- c("Monday","Tuesday","Wednesday", "Thursday", "Friday")
+  roulette_vector
+  
+  ## Poker winnings from Monday to Friday
+  poker_vector <- c(140, -50, 20, -120, 240)
+  
+  ## Roulette winnings from Monday to Friday
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  
+  ## The variable days_vector
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  days_vector
+  
+  ## Assign the names of the day to roulette_vector and poker_vector
+  names(poker_vector) <-   days_vector
+  poker_vector
+  
+  names(roulette_vector) <- days_vector
+  roulette_vector
+  
+  A_vector <- c(1, 2, 3)
+  B_vector <- c(4, 5, 6)
+  
+  ## Take the sum of A_vector and B_vector
+  total_vector <- A_vector + B_vector
+  
+  ## Print out total_vector
+  total_vector
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Assign to total_daily how much you won/lost on each day
+  total_daily <- poker_vector + roulette_vector
+  total_daily
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Total winnings with poker
+  total_poker <- sum(poker_vector)
+  total_poker
+  
+  ## Total winnings with roulette
+  total_roulette <-  sum(roulette_vector)
+  total_roulette
+  
+  ## Total winnings overall
+  total_week <- total_poker + total_roulette
+  total_week
+  
+  ## Print out total_week
+  total_week
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Calculate total gains for poker and roulette
+  total_poker <- sum(poker_vector)
+  total_poker
+  
+  total_roulette <- sum(roulette_vector)
+  total_roulette
+  
+  ## Check if you realized higher total gains in poker than in roulette 
+  total_poker > total_roulette
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Define a new variable based on a selection
+  poker_wednesday <- poker_vector[3]
+  poker_wednesday
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Define a new variable based on a selection
+  poker_midweek <- poker_vector[c(2, 3, 4)]
+  poker_midweek
+  
+  roulette_selection_vector <- roulette_vector[2:5]
+  roulette_selection_vector
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Select poker results for Monday, Tuesday and Wednesday
+  poker_start <- poker_vector[c("Monday", "Tuesday", "Wednesday")]
+  poker_start
+  
+  ## Calculate the average of the elements in poker_start
+  mean(poker_start)
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Which days did you make money on poker?
+  selection_vector <- poker_vector[1:5] > 0
+  poker_vector
+  poker_vector[1:5]
+  selection_vector
+  
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Which days did you make money on poker?
+  selection_vector <- poker_vector > 0
+  
+  ## Select from poker_vector these days
+  poker_winning_days <- poker_vector[selection_vector]
+  poker_winning_days
+  
+  ## Poker and roulette winnings from Monday to Friday:
+  poker_vector <- c(140, -50, 20, -120, 240)
+  roulette_vector <- c(-24, -50, 100, -350, 10)
+  days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+  names(poker_vector) <- days_vector
+  names(roulette_vector) <- days_vector
+  
+  ## Which days did you make money on roulette?
+  selection_vector <- roulette_vector > 0
+  selection_vector
+  
+  ## Select from roulette_vector these days
+  roulette_winning_days <- roulette_vector[selection_vector]
+  roulette_winning_days
+  
+## EOB Vector
+  
+  
+# ==== Matrix ====
+    ## Construct a matrix with 3 rows that contain the numbers 1 up to 9
+      matrix(1:9, byrow = TRUE)
+      matrix(1:9, byrow = TRUE, nrow = 3)
+      matrix(1:9,  nrow = 3) #by default it is column based
+      
+    
+    ## Box office Star Wars (in millions!)
+      new_hope <- c(460.998, 314.4)
+      empire_strikes <- c(290.475, 247.900)
+      return_jedi <- c(309.306, 165.8)
+      
+    ## Create box_office
+      box_office <- c(new_hope, empire_strikes, return_jedi)
+      box_office
+      
+    ## Construct star_wars_matrix
+      star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
+      star_wars_matrix
+      
+    ## Box office Star Wars (in millions!)
+      new_hope <- c(460.998, 314.4)
+      empire_strikes <- c(290.475, 247.900)
+      return_jedi <- c(309.306, 165.8)
+      
+    ## Construct matrix
+      star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
+      star_wars_matrix
+      
+    ## Vectors region and titles, used for naming
+      region <- c("US", "non-US")
+      titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+      
+    ## Name the columns with region
+      colnames(star_wars_matrix) <- region
+    
+    ## Name the rows with titles
+      rownames(star_wars_matrix) <- titles
+      star_wars_matrix
+      
+    
+    ## Construct star_wars_matrix
+      box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+      star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
+                   dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
+                                   c("US", "non-US")))
+      star_wars_matrix
+      
+    ## Calculate worldwide box office figures
+      worldwide_vector <- rowSums(star_wars_matrix)
+      worldwide_vector
+      
+    ## Construct star_wars_matrix
+      box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+      star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
+                   dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
+                                   c("US", "non-US")))
+      
+    ## The worldwide box office figures
+      worldwide_vector <- rowSums(star_wars_matrix)
+      worldwide_vector
+      
+    ## Bind the new variable worldwide_vector as a column to star_wars_matrix
+      all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
+      all_wars_matrix
+      
+      
+    ## star_wars_matrix and star_wars_matrix2 are available in your workspace
+      star_wars_matrix  
+      
+      box_office2 <- c(474.5,310.7,380.3,552.5,338.7,468.5)
+    
+      star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,
+                  dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"), 
+                                  c("US", "non-US")))
+    
+    
+    
+      star_wars_matrix2 
+    
+    ## Combine both Star Wars trilogies in one matrix
+      all_wars_matrix <- rbind(star_wars_matrix,star_wars_matrix2)
+      all_wars_matrix
+    
+    ## Total revenue for US and non-US
+      total_revenue_vector <- colSums(all_wars_matrix)
+      total_revenue_vector
+    
+    
+    ## all_wars_matrix is available in your workspace
+      all_wars_matrix
+    
+    ## Select the non-US revenue for all movies
+      non_us_all <- all_wars_matrix[,2]
+      non_us_all
+    ## Average non-US revenue
+      mean(non_us_all)
+    
+    ## Select the non-US revenue for first two movies
+      non_us_some <- all_wars_matrix[1:2,2]
+      non_us_some
+    ## Average non-US revenue for first two movies
+      mean(non_us_some)
+    
+    
+    ## all_wars_matrix is available in your workspace
+      all_wars_matrix
+    
+    ## Estimate the visitors
+      visitors <- all_wars_matrix / 5
+      visitors
+      
+    
+    ## all_wars_matrix and ticket_prices_matrix are available in your workspace
+      all_wars_matrix
+      ticket_prices_matrix <- matrix(c(5,5,6,6,7,7,4,4,4.5,4.5,4.9,4.9), nrow = 6, ncol = 2, byrow = TRUE,
+                       dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi","The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"), 
+                                       c("US", "non-US")))
+      
+      
+      ticket_prices_matrix
+    ## Estimated number of visitors
+      visitors <- all_wars_matrix / ticket_prices_matrix
+      visitors
+      
+    ## US visitors
+      us_visitors <- visitors[,1]
+      us_visitors
+    ## Average number of US visitors
+      mean(us_visitors)
+      
+## EOB Matrix
+      
+# ==== Factors  ====
+  ## Assign to the variable theory what this chapter is about!
+    theory <- "factors for categorical variables"
+    theory
+    
+  
+  ## Gender vector
+    gender_vector <- c("Male", "Female", "Female", "Male", "Male")
+  
+  ## Convert gender_vector to a factor
+    factor_gender_vector <- factor(gender_vector)
+    factor_gender_vector
+  
+  
+  
+  ## Animals
+    animals_vector <- c("Elephant", "Giraffe", "Donkey", "Horse")
+    factor_animals_vector <- factor(animals_vector)
+    factor_animals_vector
+    
+  ## Temperature
+    temperature_vector <- c("High", "Low", "High","Low", "Medium")
+    factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
+    factor_temperature_vector
+  
+  
+  ## Code to build factor_survey_vector
+    survey_vector <- c("M", "F", "F", "M", "M")
+    factor_survey_vector <- factor(survey_vector)
+    factor_survey_vector
+  ## Specify the levels of factor_survey_vector
+    levels(factor_survey_vector) <- c("Female","Male")
+    factor_survey_vector
+    
+  
+  
+  ## Build factor_survey_vector with clean levels
+    survey_vector <- c("M", "F", "F", "M", "M")
+    factor_survey_vector <- factor(survey_vector)
+    levels(factor_survey_vector) <- c("Female", "Male")
+    factor_survey_vector
+    
+  ## Generate summary for survey_vector
+    summary(survey_vector)
+  
+  ## Generate summary for factor_survey_vector
+    summary(factor_survey_vector)
+  
+  
+  
+  ## Build factor_survey_vector with clean levels
+    survey_vector <- c("M", "F", "F", "M", "M")
+    factor_survey_vector <- factor(survey_vector)
+    levels(factor_survey_vector) <- c("Female", "Male")
+    factor_survey_vector
+  
+  ## Male
+    male <- factor_survey_vector[1]
+    male
+  ## Female
+    female <- factor_survey_vector[2]
+    female
+  ## Battle of the sexes: Male 'larger' than female?
+    male > female
+  
+  
+  ## Create speed_vector
+    speed_vector <- c("fast", "slow","slow","fast", "insane")
+    speed_vector
+    
+  
+  ## Create speed_vector
+    speed_vector <- c("fast", "slow", "slow", "fast", "insane")
+  
+  ## Convert speed_vector to ordered factor vector
+    factor_speed_vector <- factor(speed_vector,ordered = TRUE, levels = c("slow", "fast", "insane"))
+  
+  ## Print factor_speed_vector
+    factor_speed_vector
+    summary(factor_speed_vector)
+  
+  
+  
+  ## Create factor_speed_vector
+    speed_vector <- c("fast", "slow", "slow", "fast", "insane")
+    factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "fast", "insane"))
+  
+  
+    factor_speed_vector[2]
+  ## Factor value for second data analyst
+    da2 <- factor_speed_vector[2]
+    da2
+  
+  ## Factor value for fifth data analyst
+    da5 <- factor_speed_vector[5]
+    da5
+  ## Is data analyst 2 faster than data analyst 5?
+    da2 < da5
+    
+## EOF Factor
+
+# ==== Data frame ====
+  ## Print out built-in R data frame
+    mtcars
+    class(mtcars)
+    str(mtcars)
+    summary(mtcars)
+    head(mtcars)
+    tail(mtcars)
+    
+  
+  ## Investigate the structure of mtcars
+    str(mtcars)
+    summary(mtcars)
+    
+  ## Definition of vectors
+    name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+            "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+    diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+    rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+    rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+  
+  ## Create a data frame from the vectors
+    planets_df <- data.frame(name,type,diameter,rotation,rings)
+    planets_df
+    planets_df[5]
+    planets_df[,5]
+  
+  ## Check the structure of planets_df
+    str(planets_df)
+  
+  ## The planets_df data frame from the previous exercise is pre-loaded
+  
+  ## Print out diameter of Mercury (row 1, column 3)
+    planets_df[1,3]
+  
+  ## Print out data for Mars (entire fourth row)
+    planets_df[4,]
+    planets_df[,4]
+  
+  ## The planets_df data frame from the previous exercise is pre-loaded
+  
+  ## Select first 5 values of diameter columnn
+    planets_df
+    planets_df[1:5,"diameter"]
+  
+  
+  ## planets_df is pre-loaded in your workspace
+  
+  ## Select the rings variable from planets_df
+    rings_vector <- planets_df$rings
+    rings_vector
+  
+  
+  ## planets_df and rings_vector are pre-loaded in your workspace
+  
+  ## Adapt the code to select all columns for planets with rings
+    planets_df[rings_vector, TRUE]
+  
+  
+  ## planets_df is pre-loaded in your workspace
+  
+  ## Select planets with diameter < 1
+    subset(planets_df,subset = diameter < 1)
+  
+  
+  ## planets_df is pre-loaded in your workspace
+  
+  ## Use order() to create positions
+    planets_df$diameter
+    positions <-  order(planets_df$diameter)
+    planets_df
+    positions
+  
+  ## Use positions to sort planets_df
+    planets_df[positions,]
+    ## EOF Data frame
+# ==== List ====
+  ## An R list is an object consisting of an ordered collection of objects known as its components.
+  
+  ## There is no particular need for the components to be of the same mode or type, and, for example, 
+  ## a list could consist of a numeric vector, a logical value, a matrix, a complex vector, a character 
+  ## array, a function, and so on. Here is a simple example of how to make a list:
+  
+    Lst <- list(name="Fred", wife="Mary", no.children=3,child.ages=c(4,7,9))
+  
+  ## Components are always numbered and may always be referred to as such. 
+  ## Thus if Lst is the name of a list with four components, these may be individually 
+  ## referred to as Lst[[1]], Lst[[2]], Lst[[3]] and Lst[[4]]. If, further, Lst[[4]] is a 
+  ## vector subscripted array then Lst[[4]][1] is its first entry.
+    Lst[[4]][1]
+  
+  ## Vector with numerics from 1 up to 10
+    my_vector <- 1:10 
+    my_vector
+    
+  ## Matrix with numerics from 1 up to 9
+    my_matrix <- matrix(1:9, ncol = 3)
+    my_matrix
+    
+  ## First 10 elements of the built-in data frame mtcars
+    my_df <- mtcars[1:10,]
+    my_df
+    
+  ## Construct list with these different elements:
+    my_list <- list(my_vector,my_matrix,my_df)
+    my_list
+
+  ## Vector with numerics from 1 up to 10
+    my_vector <- 1:10 
+  
+  ## Matrix with numerics from 1 up to 9
+    my_matrix <- matrix(1:9, ncol = 3)
+  
+  ## First 10 elements of the built-in data frame mtcars
+    my_df <- mtcars[1:10,]
+  
+  ## Adapt list() call to give the components names
+    my_list <- list(my_vector, my_matrix, my_df)
+  
+  ## Print out my_list
+    names(my_list) <- c("vec", "mat", "df")
+    my_list
+  
+  ## The variables mov, act and rev are available
+  
+  ## Finish the code to build shining_list
+    mov <- "The Shining"
+    act <- c("Jack Nicholson" ,  "Shelley Duvall" ,  "Danny Lloyd"    ,  "Scatman Crothers" ,  "Barry Nelson" )
+    scores <- c(4.5,4.0,5.0)
+    sources <- c("IMDB1","IMDB2","IMDB3")
+    comments <- c("Best Horror Film I Have Ever Seen", "A truly brilliant and scary film from Stanley Kubrick","A masterpiece of psychological horror")
+    rev <- data.frame(scores,sources,comments)
+    shining_list <- list(moviename = mov, actors = act, reviews = rev)
+    shining_list
+  
+  ## shining_list is already pre-loaded in the workspace
+  
+  ## Print out the vector representing the actors
+    shining_list[["reviews"]]
+  
+  ## Print the second element of the vector representing the actors
+    shining_list[[2]][2]
+    shining_list$actors
+  
+  ## shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+  
+  ## We forgot something; add the year to shining_list
+    shining_list_full <- c(shining_list,year=1980)
+  
+  ## Have a look at shining_list_full
+    shining_list_full
+    str(shining_list_full)
+  
+## EOF List
+
+# ==== Intermideate R ====
+## EOF
+
+# ==== Conditionals and Control Flow ====
+  ## Comparison of logicals
+    TRUE == FALSE
+  
+  ## Comparison of character strings
+    "useR" == "user"
+  
+  ## Compare a logical with a numeric
+    TRUE == 1
+  
+  ## Comparison of numerics
+    -6 * 5 + 2 >= -10 + 1
+  
+  
+  ## Comparison of character strings
+    "raining" <= "raining dogs"
+  
+  ## Comparison of logicals
+    TRUE > FALSE
+  
+  ## The linkedin and facebook vectors have already been created for you
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+    facebook <- c(17, 7, 5, 16, 8, 13, 14)
+    
+  ## Popular days
+    linkedin > 15
+  
+  ## Quiet days
+    linkedin <= 5
+  
+  ## LinkedIn more popular than Facebook
+    linkedin > facebook
+  
+  ## The social data has been created for you
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+    facebook <- c(17, 7, 5, 16, 8, 13, 14)
+    views <- matrix(c(linkedin, facebook), nrow = 2, byrow = TRUE)
+    views
+    
+  ## When does views equal 13?
+    views==13
+  
+  ## When is views less than or equal to 14?
+    views<=14
+  
+  ## The linkedin and last variable are already defined for you
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+    last <- tail(linkedin, 1)
+    last
+    
+  ## Is last under 5 or above 10?
+    last < 5 | last > 10
+  
+  ## Is last between 15 (exclusive) and 20 (inclusive)?
+    15 < last & last <= 20 
+  
+  ## The social data (linkedin, facebook, views) has been created for you
+  
+  ## linkedin exceeds 10 but facebook below 10
+    linkedin > 10 & facebook <10
+  
+  ## When were one or both visited at least 12 times?
+    (linkedin >= 12 | facebook >= 12 ) | (linkedin >= 12 & facebook >= 12 )
+  
+  ## When is views between 11 (exclusive) and 14 (inclusive)?
+    11 < views & views <= 14
+  
+    !TRUE
+    !(5 > 3)
+    !!FALSE
+    
+    x <- 5
+    y <- 7
+    !(!(x < 4) & !!!(y > 12))
+    
+  ## li_df is pre-loaded in your workspace
+    li_df <- read.csv("ConditionalsAndControlFlow/li_df.csv",header = TRUE)
+    write.csv(li_df)
+    
+  ## Select the second column, named day2, from li_df: second
+    second <- li_df$day2
+    second
+    
+  ## Build a logical vector, TRUE if value in second is extreme: extremes
+    extremes <- second > 25 | second < 5
+    extremes
+  ## Count the number of TRUEs in extremes
+    sum(extremes)
+  
+  ## Solve it with a one-liner
+    sum(li_df$day2 > 25 | li_df$day2 < 5)
+  
+  ## Variables related to your last day of recordings
+    medium <- "LinkedIn"
+    num_views <- 14
+    
+  ## Examine the if statement for medium
+    if (medium == "LinkedIn") {
+    print("Showing LinkedIn information")
+  }
+  
+  ## Write the if statement for num_views
+    if (num_views > 15) {
+      print("You're popular!")
+    }
+    
+  ## Variables related to your last day of recordings
+    medium <- "LinkedIn"
+    num_views <- 14
+    
+  ## Control structure for medium
+    if (medium == "LinkedIn") {
+      print("Showing LinkedIn information")
+    } else if (medium == "Facebook") {
+  ## Add code to print correct string when condition is TRUE
+    print("Showing Facebook information")
+  } else {
+    print("Unknown medium")
+  }
+  
+  ## Control structure for num_views
+    if (num_views > 15) {
+      print("You're popular!")
+    } else if (num_views <= 15 & num_views > 10) {
+  ## Add code to print correct string when condition is TRUE
+    print("Your number of views is average")
+    } else {
+    print("Try to be more visible!")
+    }
+    number <- 4
+  
+    if (number < 10) {
+      if (number < 5) {
+        result <- "extra small"
+      } else {
+        result <- "small"
+      }
+    } else if (number < 100) {
+      result <- "medium"
+    } else {
+      result <- "large"
+    }
+    print(result)
+    
+  ## Variables related to your last day of recordings
+    li <- 15
+    fb <- 9
+    
+  ## Code the control-flow construct
+    if (li >= 15 & fb >= 15) {
+      sms <- 2 * (li + fb)
+    } else if ( li < 10 & fb < 10) {
+      sms <- 0.5 * (li + fb)
+    } else {
+      sms <- li + fb
+    }
+    
+  ## Print the resulting sms to the console
+    print(sms)
+      
+    ## EOF Conditionals and Control Flow
+# ==== Loops ====
+  ## Initialize the speed variable
+    speed <- 64
+  
+  ## Code the while loop
+    while ( speed > 30) {
+      print("Slow down!")
+      speed <- speed - 7
+        }
+    
+  ## Print out the speed variable
+    speed
+  
+  ## Initialize the speed variable
+    speed <- 64
+  
+  ## Extend/adapt the while loop
+    while (speed > 30) {
+      print(paste("Your speed is",speed))
+      if ( speed > 48) {
+        
+      print("Slow down big time!")
+      
+      speed <- speed - 11
+      
+      } else {
+        speed <- speed -6
+        print("Slow down!")
+      }
+    }
+  
+  ## Initialize the speed variable
+    speed <- 88
+  
+    while (speed > 30) {
+    print(paste("Your speed is", speed))
+    
+  ## Break the while loop when speed exceeds 80
+    if ( speed > 80) {
+      break
+    }
+    
+    if (speed > 48) {
+      print("Slow down big time!")
+      speed <- speed - 11
+    } else {
+      print("Slow down!")
+      speed <- speed - 6
+      }
+    }
+  
+  ## Initialize i as 1 
+    i <- 1
+  
+  ## Code the while loop
+    while (i <= 10) {
+      print(3*i)
+      if ( (3*i)%%8 == 0 ) {
+        print(3*i)
+        break
+      }
+      i <- i + 1
+    }
+    
+  ## The linkedin vector has already been defined for you
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+    linkedin  
+  ## Loop version 1
+    for(element in linkedin){
+      print(element)
+    }
+    
+  ## Loop version 2
+    for(i in 1:length(linkedin)) {
+      print(linkedin[i])
+    }
+  
+  ## The nyc list is already specfied
+    nyc <- list(pop = 8405837, boroughs = c("Manhattan","Bronx","Brooklyn","Queens",
+                                          "Staten Island"), capital = FALSE)
+  ## Loop version 1
+    for(element in nyc){
+      print(element)
+    }
+  
+  ## Loop version 2
+    for (i in 1:length(nyc)){
+      ## print(nyc[i])
+      print(nyc[[i]])
+    }
+  
+  ## The tic-tac-toe matrix ttt has already been defined for you
+    v1 <- c("O", "NA", "X", "NA", "O", "O", "X", "NA", "X")
+    v1
+  
+    ttt <- matrix(data = v1, byrow = TRUE, nrow = 3)
+    ttt
+  ## define the docuble matrix for loop
+    for ( i in 1:nrow(ttt)){
+      for(j in 1:ncol(ttt)){
+        print(paste("On row",i,"and column", j, "the board contains",ttt[i,j],sep = " ",collapse = "#"))
+      }
+    }
+    
+  ## The linkedin vector has already been defined for you 
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+  ## Code the for loop with conditionals
+    for (li in linkedin) {
+      if (li > 10){
+        print("You're popular") }
+      else{
+        print("Be more visible")
+      }
+    }
+    
+  ## The linkedin vector has already been defined for you 
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+  ## Adapt / extend the for loop
+    for (li in linkedin){
+      if (li > 10){
+        print("You're popular") }
+      else{
+        print("Be more visible")
+      }
+      
+      if (li > 16){
+        print("This is rediculous, I'm outta here!")
+        break
+      }
+      if (li < 5){
+        print("This is too embarrassing!")
+        next
+      }
+    }
+  
+  ## Pre-defined variables
+    rquote <- "r's internals are irrefutably intriguing"
+    chars <- strsplit(rquote,split = "")
+    chars
+  ## chars <- strsplit(rquote,split = "")[[2]]
+  ## chars  
+    chars <- strsplit(rquote,split = "")[[1]]
+    chars
+  
+  ## Intialize rcount
+    rcount <- 0
+  
+  ## Finish the for loop
+    for (char in chars){
+      if (char == "u"){
+        break
+      }
+      
+      if (char == "r"){
+        rcount = rcount + 1
+      }
+    }
+  ## Print out rcount
+    print(rcount)
+    
+## EOF Loop
+
+# ==== Function ====
+  ##  
+  help(sd)
+  args(sd)  
+  ## Consult the documentation of the mean() function
+    help(mean)
+  ## Inspect the arguments of the mean() function
+    args(mean)
+  
+  ## The linkedin and facebook vectors have already been created for you
+    linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+    facebook <- c(17, 7, 5, 16, 8, 13, 14)
+    
+  ## Calculate average number of views
+    avg_li <- mean(linkedin)
+    avg_fb <- mean(facebook)  
+    
+    print(avg_li)
+    print(avg_fb)
+    
+  ## Calculate mean of the sum
+    avg_sum = mean(linkedin + facebook)
+    print(avg_sum)
+    avg_sum_trimmed = mean((linkedin + facebook),trim = 0.2)
+    print(avg_sum_trimmed)  
+    
+  ## The linkedin and facebook vectors have already been created for you
+    linkedin <- c(16, 9, 13, 5, NA, 17, 14)
+    facebook <- c(17, NA, 5, 16, 8, 13, 14)
+  
+  ## Basic average of linkedin
+    mean(linkedin)
+  ## Advanced average of linkedin
+    mean(linkedin, na.rm = TRUE)  
+  
+  ## Calculate mean absolute deviation
+    mean(abs(linkedin - facebook),na.rm = TRUE)
+  
+    args(read.table)
+  
+  ## Create a function pow_two()
+    pow_two <- function(x){
+      x*x
+    }
+  
+  ## Use the function
+    pow_two(12)
+  
+  ## Create a function sum_abs()
+    sum_abs <- function(a,b){
+      abs(a) + abs(b)
+    }
+    
+  ## Use the function
+    sum_abs(-2,3)
+  
+  ## Define the function hello()
+    hello <- function(){
+      print("Hi there!")
+      TRUE
+    }
+  
+  ## Call the function hello()
+    hello()
+  
+  ## Finish the pow_two() function
+    pow_two <- function(x) {
+      y <- x ^ 2
+      print(paste(x, "to the power two equals", y))
+      return(y)
+    }
+  
+  ## Finish the pow_two() function
+    pow_two <- function(x,print_info=TRUE) {
+      y <- x ^ 2
+      if(print_info == TRUE){
+        print(paste(x, "to the power two equals", y))}
+      return(y)
+    }
+  
+    pow_two(2,TRUE)
+  
+  
+  ## Function scoping
+    pow_two <- function(x) {
+      y <- x ^ 2
+      return(y)
+    }
+    pow_two(4)
+    y
+    x
+  
+  ## R passes arguments by value
+    triple <- function(x) {
+      x <- 3*x
+      x
+    }
+    a <- 5
+    triple(a)
+    a
+  
+    ## EOF Funtions
+
+# ==== R packages ====
+    search()
+    install.packages("ggvis")
+    library("ggvis")
+    search()
+    
+    require()  
+    install.packages("ggplot2")
+    library(ggplot2)
+    qplot()
+    
+  ## Load the ggplot2 package
+    library(ggplot2)
+  
+  ## Retry the qplot() function
+    qplot(mtcars$wt, mtcars$hp)
+  
+  ## Check out the currently attached packages again
+    search()
+  
+  ## The vector pioneers has already been created for you
+    pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+    pioneers
+  ## Split names from birth year
+    split_math <- strsplit(pioneers, split = ":")
+    split_math
+  ## Convert to lowercase strings: split_low
+    split_low <- lapply(split_math,tolower)
+  
+  ## Take a look at the structure of split_low
+    str(split_low)
+  
+  ## Code from previous exercise:
+    pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+    pioneers
+    split <- strsplit(pioneers, split = ":")
+    split
+    split_low <- lapply(split, tolower)
+    split_low
+  ## Write function select_first()
+    select_first <- function(x) {
+      x[1]
+    }
+## EOF R package
+    
+# ==== Apply ====
+  ## Apply select_first() over split_low: names
+    names <- lapply(split_low,select_first)
+    names
+  ## Write function select_second()
+    select_second <- function(x){
+      x[2]
+    }
+   
+  ## Apply select_second() over split_low: years
+    years <- lapply(split_low,select_second)  
+    years
+    
+  ## split_low has been created for you
+    split_low
+  
+  ## Transform: use anonymous function inside lapply
+    names <- lapply(split_low, function(x){x[1]})
+    names
+  
+  ## Transform: use anonymous function inside lapply
+    years <- lapply(split_low, function(x){x[2]})
+    years
+    
+  ## Definition of split_low
+    pioneers <- c("GAUSS:1777", "BAYES:1702", "PASCAL:1623", "PEARSON:1857")
+    split <- strsplit(pioneers, split = ":")
+    split_low <- lapply(split, tolower)
+    
+  ## Generic select function
+    select_el <- function(x, index) {
+      x[index]
+    }
+  
+  ## Use lapply() twice on split_low: names and years
+    names <- lapply(split_low,select_el,1)
+    names
+    years <- lapply(split_low,select_el,2)
+    years
+    
+    str(TRUE)
+    lapply(list(1,"a", TRUE), str)  
+    
+    split_low
+
+  ## Temp
+    temp <- list(c(3,  7,  9,  6, -1), c(6,  9, 12, 13,  5), c(4,  8,  3, -1, -3),c(1,  4,  7,  2, -2),
+                 c(5, 7, 9, 4, 2), c(-3,  5,  8,  9,  4), c(3, 6, 9, 4, 1))
+    
+    
+  ## temp has already been defined in the workspace
+    temp
+    str(temp)
+  ## Use lapply() to find each day's minimum temperature
+    lapply(temp,min)
+    
+  ## Use sapply() to find each day's minimum temperature
+    sapply(temp,min)
+    
+  ## Use lapply() to find each day's maximum temperature
+    lapply(temp,max)
+    
+  ## Use sapply() to find each day's maximum temperature
+    sapply(temp,max)  
+  
+  ## temp is already defined in the workspace
+    temp
+    # Finish function definition of extremes_avg
+    extremes_avg <- function(x) {
+      ( min(x) + max(x) ) / 2
+    }
+    
+  ## Apply extremes_avg() over temp using sapply()
+    sapply(temp,extremes_avg)
+    
+  ## Apply extremes_avg() over temp using lapply()
+    lapply(temp,extremes_avg) 
+    
+  ## temp is already available in the workspace
+    temp
+  
+  ## Create a function that returns min and max of a vector: extremes
+    extremes <- function(x) {
+      c(min = min(x), max = max(x))
+    }
+    extremes(temp)
+  
+  ## Apply extremes() over temp with sapply()
+    sapply(temp,extremes)
+    
+  ## Apply extremes() over temp with lapply()
+    lapply(temp,extremes)
+    
+  ## temp is already prepared for you in the workspace
+    temp
+  ## Definition of below_zero()
+    below_zero <- function(x) {
+      return(x[x < 0])
+    }
+    below_zero(c(4,5,-3,6))
+  ## Apply below_zero over temp using sapply(): freezing_s
+    freezing_s <- sapply(temp,below_zero)
+    freezing_s
+  ## Apply below_zero over temp using lapply(): freezing_l
+    freezing_l <- lapply(temp,below_zero)
+    freezing_l
+  ## Are freezing_s and freezing_l identical?
+    identical(freezing_s,freezing_s)
+  
+  ## temp is already available in the workspace
+    temp
+    # Definition of print_info()
+    print_info <- function(x) {
+      cat("The average temperature is", mean(x), "\n")
+    }
+    
+  ## Apply print_info() over temp using sapply()
+    sapply(temp,print_info)
+    
+  ## Apply print_info() over temp using lapply()
+    lapply(temp,print_info)
+    
+    runif (10)
+  ## temp is already available in the workspace
+    temp
+    # Definition of basics()
+    basics <- function(x) {
+      c(min = min(x), mean = mean(x), max = max(x))
+    }
+    
+  ## Apply basics() over temp using vapply()
+    vapply(temp,basics,numeric(3))
+    
+  ## temp is already available in the workspace
+    temp
+    str(temp)
+  
+  ## Definition of the basics() function
+    basics <- function(x) {
+      c(min = min(x), mean = mean(x), median = median(x),max = max(x))
+    }
+    
+  # Fix the error:
+    vapply(temp, basics, numeric(4))
+  
+  ## temp is already defined in the workspace
+    
+  ## Convert to vapply() expression
+    vapply(temp, max, numeric(1))
+    
+  ## Convert to vapply() expression
+    vapply(temp, function(x, y) { mean(x) > y }, logical(1), y = 5)
+    
+  ## The errors vector has already been defined for you
+    errors <- c(1.9, -2.6, 4.0, -9.5, -3.4, 7.3)
+    
+  ## Sum of absolute rounded values of errors
+    sum(round(abs(errors)))
+    
+  ## Don't edit these two lines
+    vec1 <- c(1.5, 2.5, 8.4, 3.7, 6.3)
+    vec2 <- rev(vec1)
+    
+  ## Fix the error
+    mean(c(vec1,vec2))
+   
+  ## The linkedin and facebook lists have already been created for you
+    linkedin <- list(16, 9, 13, 5, 2, 17, 14)
+    facebook <- list(17, 7, 5, 16, 8, 13, 14)
+    
+  ## Convert linkedin and facebook to a vector: li_vec and fb_vec
+    li_vec <- unlist(linkedin)
+    fb_vec <- unlist(facebook)
+   
+    
+  ## Append fb_vec to li_vec: social_vec
+    social_vec <- c(li_vec,fb_vec)
+    
+  ## Sort social_vec
+    sort(social_vec,decreasing = TRUE)
+    
+    rep(seq(1,7,by = 2), times = 7)
+    
+  ## Create first sequence: seq1
+    seq1 <- seq(1,500, by = 3)
+    seq1
+  
+  ## Create second sequence: seq2
+    seq2 <- seq(1200,900, by = -7)
+    seq2
+  
+  ## Calculate total sum of the sequences
+    sum(c(seq1,seq2))
+
+## EOF 
+
+# ==== Regular Expression ====
+  ## The emails vector has already been defined for you
+    emails <- c("john.doe@ivyleague.edu", "education@world.gov", "dalai.lama@peace.org",
+              "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
+  
+  ## Use grepl() to match for "edu"
+    grepl("edu",emails)
+  
+  ## Use grep() to match for "edu", save result to hits
+    hits <- grep("edu",emails)
+  
+  ## Subset emails using hits
+    emails[hits]
+  
+  
+  ## @, because a valid email must contain an at-sign.
+  ## .*, which matches any character (.) zero or more times (*). Both the dot and the
+  ## asterisk are metacharacters. You can use them to match any character between the at
+  ## -sign and the ".edu" portion of an email address.
+  ## \\.edu$, to match the ".edu" part of the email at the end of the string. The \\ part
+  ## escapes the dot: it tells R that you want to use the . as an actual character.
+  ## The emails vector has already been defined for you
+    emails <- c("john.doe@ivyleague.edu", "education@world.gov", "dalai.lama@peace.org",
+              "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
+  
+  ## Use grepl() to match for .edu addresses more robustly
+    grepl("@.*\\.edu$",emails)
+  
+  ## Use grep() to match for .edu addresses more robustly, save result to hits
+    hits <- grep("@.*\\.edu$",emails)
+  
+  ## Subset emails using hits
+    emails[hits]
+  
+  ## The emails vector has already been defined for you
+    emails <- c("john.doe@ivyleague.edu", "education@world.gov", "global@peace.org",
+              "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
+  
+  ## Use sub() to convert the email domains to datacamp.edu
+    sub("@.*\\.edu$","@datacamp.edu",emails)
+  
+  ## 
+  ## .*: A usual suspect! It can be read as "any character that is matched zero or more times".
+  ## \\s: Match a space. The "s" is normally a character, escaping it (\\) makes it a metacharacter.
+  ## [0-9]+: Match the numbers 0 to 9, at least once (+).
+  ## ([0-9]+): The parentheses are used to make parts of the matching string 
+  ## available to define the replacement. The \\1 in the replacement argument of 
+  ## sub() gets set to the string that is captured by the regular expression [0-9]+.
+    awards <- c("Won 1 Oscar.",
+              "Won 1 Oscar. Another 9 wins & 24 nominations.",
+              "1 win and 2 nominations.",
+              "2 wins & 3 nominations.",
+              "Nominated for 2 Golden Globes. 1 more win & 2 nominations.",
+              "4 wins & 1 nomination.")
+  
+    sub(".*\\s([0-9]+)\\snomination.*$", "\\1", awards)
+    
+## EOF regular expression
+    
+
+
+# ==== Date and Time ====
+  ## Get the current date: today
+    today <- Sys.Date()
+  
+  ## See what today looks like under the hood
+    unclass(today)
+  
+  ## Get the current time: now
+    now <- Sys.time()
+  
+  ## See what now looks like under the hood
+    unclass(now)
+  
+  
+  ## Date format
+  ## %Y: 4-digit year (1982)
+  ## %y: 2-digit year (82)
+  ## %m: 2-digit month (01)
+  ## %d: 2-digit day of the month (13)
+  ## %A: weekday (Wednesday)
+  ## %a: abbreviated weekday (Wed)
+  ## %B: month (January)
+  ## %b: abbreviated month (Jan)
+  
+  ## as.Date("1982-01-13")
+  ## as.Date("Jan-13-82", format = "%b-%d-%y")
+  ## as.Date("13 January, 1982", format = "%d %B, %Y")
+  
+  ## Definition of character strings representing dates
+    str1 <- "May 23, '96"
+    str2 <- "2012-03-15"
+    str3 <- "30/January/2006"
+    
+  ## Convert the strings to dates: date1, date2, date3
+    date1 <- as.Date(str1, format = "%b %d, '%y")
+    date2 <- as.Date(str2, format = "%Y-%m-%d")
+    date3 <- as.Date(str3, format = "%d/%B/%Y")
+  
+  ## Convert dates to formatted strings
+    format(date1, "%A")
+    format(date2, "%d")
+    format(date3, format = "%b %Y")
+    
+  ##Time
+  ## %H: hours as a decimal number (00-23)
+  ## %I: hours as a decimal number (01-12)
+  ## %M: minutes as a decimal number
+  ## %S: seconds as a decimal number
+  ## %T: shorthand notation for the typical format %H:%M:%S
+  ## %p: AM/PM indicator
+  
+  ## Definition of character strings representing times
+    str1 <- "May 23, '96 hours:23 minutes:01 seconds:45"
+    str2 <- "2012-3-12 14:23:08"
+  
+  ## Convert the strings to POSIXct objects: time1, time2
+    time1 <- as.POSIXct(str1, format = "%B %d, '%y hours:%H minutes:%M seconds:%S")
+    time2 <- as.POSIXct(str2)
+  
+  ## Convert times to formatted strings
+    format(time1,"%M")
+    format(time2,"%I:%M %p")
+  
+  ## day1, day2, day3, day4 and day5 are already available in the workspace
+    day1 = as.Date("2019-12-17")
+    day2 = as.Date("2019-12-19")
+    day3 = as.Date("2019-12-24")
+    day4 = as.Date("2019-12-30")
+    day5 = as.Date("2020-01-04")
+
+  ## Difference between last and first pizza day
+    as.Date(day5) - as.Date(day1)
+  ## Create vector pizza
+    pizza <- c(day1, day2, day3, day4, day5)
+    pizza
+  ## Create differences between consecutive pizza days: day_diff
+    day_diff <- diff(pizza)
+  
+  ## Average period between two consecutive pizza days
+    mean(day_diff)
+  
+  ##login
+    login <- as.POSIXct(c("2019-12-21 10:18:04 UTC","2019-12-26 09:14:18 UTC",
+                        "2019-12-26 12:21:51 UTC","2019-12-26 12:37:24 UTC",
+                        "2019-12-28 21:37:55 UTC"))
+  
+  ##logout
+    logout <- as.POSIXct(c("2019-12-21 10:56:29 UTC","2019-12-26 09:14:52 UTC",
+                         "2019-12-26 12:35:48 UTC","2019-12-26 13:17:22 UTC",
+                         "2019-12-28 22:08:47 UTC"))
+  
+  ## login and logout are already defined in the workspace
+    login
+    logout
+  ## Calculate the difference between login and logout: time_online
+    time_online <- logout-login
+  
+  
+  ## Inspect the variable time_online
+    time_online
+  
+  ## Calculate the total time online
+    sum(time_online)
+  
+  ## Calculate the average time online
+    mean(time_online)  
+  
+## EOD date and time
+
+# ==== Introduction to the Tidyverse ====
+## EOF
+    
+# ==== Data wrangling ====
+  ## install.packages("gapminder")
+  
+  ## Load the gapminder package
+    library(gapminder)
+  
+  ## Load the dplyr package
+    library(dplyr)
+  
+  ## Look at the gapminder dataset
+    gapminder
+  
+    library(gapminder)
+    library(dplyr)
+  
+  ## Filter the gapminder dataset for the year 1957
+    gapminder %>%
+      filter(year == 1957)
+    
+    library(gapminder)
+    library(dplyr)
+  
+  ## Filter for China in 2002
+    gapminder %>%
+    filter (year == 2002,country == "China")
+  
+    library(gapminder)
+    library(dplyr)
+  
+  ## Sort in ascending order of lifeExp
+    gapminder %>%
+    arrange(lifeExp)
+  
+  
+  ## Sort in descending order of lifeExp
+    gapminder %>%
+    arrange(desc(lifeExp))
+  
+  
+    library(gapminder)
+    library(dplyr)
+    str(gapminder)
+  ## Filter for the year 1957, then arrange in descending order of population
+    gapminder %>%
+      filter (year == 1957) %>%
+      arrange(desc(pop))
+    
+    library(gapminder)
+    library(dplyr)
+    
+  ## Use mutate to change lifeExp to be in months
+    gapminder %>%
+    mutate(lifeExp = lifeExp * 12)
+  
+  ## Use mutate to create a new column called lifeExpMonths
+    gapminder %>%
+    mutate(lifeExpMonths = lifeExp * 12)
+  
+    library(gapminder)
+    library(dplyr)
+  
+  ## Filter, mutate, and arrange the gapminder dataset
+    gapminder %>%
+    mutate (lifeExpMonths = lifeExp * 12) %>%
+    filter(year == 2007) %>%
+    arrange(desc(lifeExpMonths))
+
+## EOF Data wrangling
+
+# ==== ggplot ====
+  ## Load the ggplot2 package as well
+    library(gapminder)
+    library(dplyr)
+    
+  
+  ## Create gapminder_1952
+    gapminder_1952 <- gapminder %>%
+      filter(year == 1952)        
+    
+    gapminder_1952
+    
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Change to put pop on the x-axis and gdpPercap on the y-axis
+  
+    ggplot(gapminder_1952, aes(x = pop, y = gdpPercap)) +  geom_point() 
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Create a scatter plot with pop on the x-axis and lifeExp on the y-axis
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) + geom_point()  
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Change this plot to put the x-axis on a log scale
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
+    geom_point() + scale_x_log10()
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Scatter plot comparing pop and gdpPercap, with both axes on a log scale
+    ggplot(gapminder_1952, aes(x = pop, y = gdpPercap)) + geom_point() + scale_x_log10() + scale_y_log10()
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Scatter plot comparing pop and lifeExp, with color representing continent
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp, color = continent, size = pop)) + geom_point() + scale_x_log10() + scale_y_log10()
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Add the size aesthetic to represent a country's gdpPercap
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp, color = continent, size = gdpPercap)) +
+    geom_point() +
+    scale_x_log10()
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Scatter plot comparing pop and lifeExp, faceted by continent
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) + geom_point() + scale_x_log10() + facet_wrap(~continent)
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Scatter plot comparing pop and lifeExp, faceted by continent
+    ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) + geom_point() + scale_x_log10() + facet_wrap(~continent)
+    
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+  ## Scatter plot comparing gdpPercap and lifeExp, with color representing continent
+  ## and size representing population, faceted by year
+    ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + geom_point() + facet_wrap(~year) + scale_x_log10()
+  
+## EOF ggplot
+
+# ==== Grouping and summarizing ====
+    library(gapminder)
+    library(dplyr)
+  ## Summarize to find the median life expectancy  
+    gapminder %>%
+      summarise(medianLifeExp = median(lifeExp))
+    library(gapminder)
+    library(dplyr)
+  ## Filter for 1957 then summarize the median life expectancy
+    gapminder %>%
+      filter(year == 1957) %>%
+      summarise(medianLifeExp = median(lifeExp))
+    library(gapminder)
+    library(dplyr)
+  ## Filter for 1957 then summarize the median life expectancy and the maximum GDP per capita
+    gapminder %>%
+      filter(year == 1957) %>%
+      summarise(medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap))
+    library(gapminder)
+    library(dplyr)
+    
+  ## Find median life expectancy and maximum GDP per capita in each year
+    gapminder %>%
+      group_by(year) %>%
+      summarise ( medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap))
+    library(gapminder)
+    library(dplyr)
+    
+  ## Find median life expectancy and maximum GDP per capita in each continent in 1957
+    gapminder %>%
+      filter(year == 1957) %>%
+      group_by(continent) %>%
+      summarise (medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap))
+    library(gapminder)
+    library(dplyr)
+    
+  ## Find median life expectancy and maximum GDP per capita in each continent/year combination
+    gapminder %>%
+    group_by(continent,year) %>%
+    summarise (medianLifeExp = median(lifeExp), maxGdpPercap = max(gdpPercap))
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+    by_year <- gapminder %>%
+    group_by(year) %>%
+    summarize(medianLifeExp = median(lifeExp),
+              maxGdpPercap = max(gdpPercap))
+  
+  ## Create a scatter plot showing the change in medianLifeExp over time
+    ggplot(by_year, aes(x = year, y = medianLifeExp)) + geom_point() + expand_limits(y = 0)
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+  ## Summarize medianGdpPercap within each continent within each year: by_year_continent
+    by_year_continent <- gapminder %>%
+    group_by(continent,year) %>%
+    summarize(medianGdpPercap = median(gdpPercap))
+  
+  ## Plot the change in medianGdpPercap in each continent over time
+    ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) + geom_point() + expand_limits(y = 0)
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+  ## Summarize the median GDP and median life expectancy per continent in 2007
+    by_continent_2007 <- gapminder %>%
+    filter(year == 2007) %>%
+    group_by(continent) %>%
+    summarise(medianLifeExp = median(lifeExp), medianGdpPercap = median (gdpPercap))
+  
+  ## Use a scatter plot to compare the median GDP and median life expectancy
+    ggplot(by_continent_2007, aes(x = medianGdpPercap, y = medianLifeExp, color = continent)) + geom_point()
+
+## EOF grouping & Summarising 
+    
+# ==== Types of visualizations ====
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+  ## Summarize the median gdpPercap by year, then save it as by_year
+    by_year <- gapminder %>%
+      group_by(year) %>%
+      summarise ( medianGdpPercap = median(gdpPercap))
+    
+  ## Create a line plot showing the change in medianGdpPercap over time
+    ggplot(by_year, aes(x = year, y = medianGdpPercap )) + geom_line() + expand_limits(y = 0)
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+  ## Summarize the median gdpPercap by year & continent, save as by_year_continent
+    by_year_continent <- gapminder %>%
+    group_by(year,continent) %>%
+    summarise(medianGdpPercap = median(gdpPercap))
+  
+  ## Create a line plot showing the change in medianGdpPercap by continent over time
+    ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) + geom_line() + expand_limits(y = 0)
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+  ## Summarize the median gdpPercap by continent in 1952
+    by_continent <- gapminder %>%
+    filter ( year == 1952) %>%
+    group_by(continent) %>%
+    summarise(medianGdpPercap = median(gdpPercap))
+  
+  ## Create a bar plot showing medianGdp by continent
+    ggplot(by_continent, aes(x= continent, medianGdpPercap)) + geom_col() 
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+  ## Filter for observations in the Oceania continent in 1952
+    oceania_1952 <- gapminder %>%
+    filter(year == 1952, continent == "Oceania") 
+
+  ## Create a bar plot of gdpPercap by country
+    ggplot(oceania_1952, aes(x = country, y = gdpPercap)) + geom_col()
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952) %>%
+    mutate(pop_by_mil = pop / 1000000)
+  
+  ## Create a histogram of population (pop_by_mil)
+    ggplot(gapminder_1952, aes(x = pop_by_mil)) + geom_histogram(bins = 50)
+  
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+    
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Create a histogram of population (pop), with x on a log scale
+    ggplot(gapminder_1952,aes(x = pop)) + geom_histogram() + scale_x_log10()
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Create a boxplot comparing gdpPercap among continents
+    ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) + geom_boxplot() + scale_y_log10()
+    library(gapminder)
+    library(dplyr)
+    library(ggplot2)
+  
+    gapminder_1952 <- gapminder %>%
+    filter(year == 1952)
+  
+  ## Add a title to this graph: "Comparing GDP per capita across continents"
+    p <- ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
+    geom_boxplot() +
+    scale_y_log10()
+  
+    p + ggtitle("Comparing GDP per capita across continents")  
+  
+## EOF visualizations
+
+# ==== Importing Data in R (Part 1) ====
+  ## Import swimming_pools.csv: pools
+    pools <- read.csv("data_dcamp/swimming_pools.csv",header = TRUE)
+  
+  ## Print the structure of pools
+    str(pools)
+  ## Import swimming_pools.csv correctly: pools
+    pools <- read.csv("data_dcamp/swimming_pools.csv", stringsAsFactors = FALSE)
+  
+  ## Check the structure of pools
+    str(pools)
+  ## Import hotdogs.txt: hotdogs
+    hotdogs <- read.delim("data_dcamp/hotdogs.txt" , header = FALSE)
+  
+  ## Summarize hotdogs
+    summary(hotdogs)
+  ## Path to the hotdogs.txt file: path
+    path <- file.path("data_dcamp/", "hotdogs.txt")
+  
+  ## Import the hotdogs.txt file: hotdogs
+    hotdogs <- read.table(path, 
+                        sep = "\t", 
+                        col.names = c("type", "calories", "sodium"), header = FALSE)
+  
+  ## Call head() on hotdogs
+    head(hotdogs)
+  ## Finish the read.delim() call
+    hotdogs <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
+  
+  ## Select the hot dog with the least calories: lily
+    lily <- hotdogs[which.min(hotdogs$calories), ]
+  
+  ## Select the observation with the most sodium: tom
+    tom <- hotdogs[which.max(hotdogs$sodium), ]
+  
+  ## Print lily and tom
+    lily
+    tom
+  
+  ## Previous call to import hotdogs.txt
+    hotdogs <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, col.names = c("type", "calories", "sodium"))
+  
+  ## Display structure of hotdogs
+    str(hotdogs)
+  
+  ## Edit the colClasses argument to import the data correctly: hotdogs2
+    hotdogs2 <- read.delim("data_dcamp/hotdogs.txt", header = FALSE, 
+                         col.names = c("type", "calories", "sodium"),
+                         colClasses = c("factor","NULL","numeric"))
+  
+  
+  ## Display structure of hotdogs2
+    str(hotdogs2)
+  ## readr is already loaded
+  library(readr)
+  ## Column names
+    properties <- c("area", "temp", "size", "storage", "method",
+                  "texture", "flavor", "moistness")
+  
+  ## Import potatoes.txt: potatoes
+    potatoes <- read_tsv("data_dcamp/potatoes.txt", col_names = properties)
+  
+  ## Call head() on potatoes
+    head(potatoes)
+  ## readr is already loaded
+  
+  ## Column names
+    properties <- c("area", "temp", "size", "storage", "method",
+                  "texture", "flavor", "moistness")
+  
+  ## Import potatoes.txt using read_delim(): potatoes
+    potatoes <- read_delim("data_dcamp/potatoes.txt", delim = "\t", col_names = properties)
+  
+  ## Print out potatoes
+    potatoes
+  ## readr is already loaded
+  
+  ## Column names
+    properties <- c("area", "temp", "size", "storage", "method",
+                  "texture", "flavor", "moistness")
+  
+  ## Import 5 observations from potatoes.txt: potatoes_fragment
+    potatoes_fragment <- read_tsv("data_dcamp/potatoes.txt", skip = 6, n_max = 5, col_names = properties)
+  ## readr is already loaded
+  
+  ## Column names
+    properties <- c("area", "temp", "size", "storage", "method",
+                  "texture", "flavor", "moistness")
+  
+  ## Import all data, but force all columns to be character: potatoes_char
+    potatoes_char <- read_tsv("data_dcamp/potatoes.txt", col_types = "cccccccc", col_names = properties)
+  
+  ## Print out structure of potatoes_char
+    str(potatoes_char)
+  ## readr is already loaded
+  
+  ## Import without col_types
+    hotdogs <- read_tsv("data_dcamp/hotdogs.txt", col_names = c("type", "calories", "sodium"))
+  
+  ## Display the summary of hotdogs
+    summary(hotdogs)
+  
+  ## The collectors you will need to import the data
+    fac <- col_factor(levels = c("Beef", "Meat", "Poultry"))
+    int <- col_integer()
+  
+  ## Edit the col_types argument to import the data correctly: hotdogs_factor
+    hotdogs_factor <- read_tsv("data_dcamp/hotdogs.txt",
+                             col_names = c("type", "calories", "sodium"),
+                             col_types = list(fac,int,int))
+  
+  ## Display the summary of hotdogs_factor
+    summary(hotdogs_factor)
+  
+  ## load the data.table package using library()
+    library(data.table)
+  
+  ## Import potatoes.csv with fread(): potatoes
+    potatoes <- fread("data_dcamp/potatoes.csv")
+  
+  ## Print out potatoes
+    potatoes
+  ## fread is already loaded
+  
+  ## Import columns 6 and 8 of potatoes.csv: potatoes
+    potatoes <- fread("data_dcamp/potatoes.csv", select = c(6,8) )
+  
+  ## Plot texture (x) and moistness (y) of potatoes
+    plot(potatoes$texture, potatoes$moistness)
+  ## Load the readxl package
+    library(readxl)
+  
+  ## Print the names of all worksheets
+    excel_sheets("data_dcamp/urbanpop.xlsx")
+  ## The readxl package is already loaded
+  
+  ## Read the sheets, one by one
+    pop_1 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 1)
+    pop_2 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 2)
+    pop_3 <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 3)
+  
+  ## Put pop_1, pop_2 and pop_3 in a list: pop_list
+    pop_list <- list(pop_1, pop_2, pop_3)
+  
+  ## Display the structure of pop_list
+    str(pop_list)
+  ## The readxl package is already loaded
+  
+  ## Read all Excel sheets with lapply(): pop_list
+    pop_list <- lapply(excel_sheets("data_dcamp/urbanpop.xlsx"),read_excel, path = "data_dcamp/urbanpop.xlsx") 
+  
+  ## Display the structure of pop_list
+    str(pop_list)
+  ## The readxl package is already loaded
+  
+  ## Import the second sheet of urbanpop.xlsx, skipping the first 21 rows: urbanpop_sel
+    urbanpop_sel <- read_excel("data_dcamp/urbanpop.xlsx", sheet = 2, col_names = FALSE, skip = 21)
+  
+  ## Print out the first observation from urbanpop_sel
+    head(urbanpop_sel, n = 1)
+  
+  
+  ## Load the gdata package
+    library(gdata)
+  
+  ## Import the second sheet of urbanpop.xls: urban_pop
+    urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2)
+  
+  ## Print the first 11 observations using head()
+    head(urban_pop, n=11)
+  ## The gdata package is alreaded loaded
+  
+  ## Column names for urban_pop
+    columns <- c("country", paste0("year_", 1967:1974))
+  
+  ## Finish the read.xls call
+    urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2,
+                        skip = 50, header = FALSE, stringsAsFactors = FALSE,
+                        col.names = columns)
+  
+  ## Print first 10 observation of urban_pop
+    head(urban_pop, n=10)
+  ## The gdata package is alreaded loaded
+    library(gdata)
+  ## Column names for urban_pop
+    columns <- c("country", paste0("year_", 1967:1974))
+  
+  ## Finish the read.xls call
+    urban_pop <- read.xls("data_dcamp/urbanpop.xls", sheet = 2,
+                        skip = 50, header = FALSE, stringsAsFactors = FALSE,
+                        col.names = columns)
+  
+  ## Print first 10 observation of urban_pop
+    head(urban_pop, n=10)
+  ## Add code to import data from all three sheets in urbanpop.xls
+    path <- "data_dcamp/urbanpop.xls"
+    urban_sheet1 <- read.xls(path, sheet = 1, stringsAsFactors = FALSE)
+    urban_sheet2 <- read.xls(path, sheet = 2, stringsAsFactors = FALSE)
+    urban_sheet3 <- read.xls(path, sheet = 3, stringsAsFactors = FALSE)
+  
+  ## Extend the cbind() call to include urban_sheet3: urban
+    urban <- cbind(urban_sheet1, urban_sheet2[-1], urban_sheet3[-1])
+  
+  ## Remove all rows with NAs from urban: urban_clean
+    urban_clean <- na.omit(urban)
+  
+  ## Print out a summary of urban_clean
+    summary(urban_clean)
+  ##install.packages("rJava")
+  ##install.packages("XLConnectJars")
+  ##install.packages("XLConnect")
+  ##install.packages(c("rJava", "XLConnect", "XLConnectJars"))
+    library(rJava)
+    library(XLConnectJars)
+    library(XLConnect)
+  ## urbanpop.xlsx is available in your working directory
+  
+  ## Load the XLConnect package
+    library(XLConnect)
+  
+  ## Build connection to urbanpop.xlsx: my_book
+    my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
+  
+  ## Print out the class of my_book
+    class(my_book)
+  ## XLConnect is already available
+  
+  ## Build connection to urbanpop.xlsx
+    my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
+  
+  ## List the sheets in my_book
+    getSheets(my_book)
+  
+  ## Import the second sheet in my_book
+    readWorksheet(my_book,2)
+  ## XLConnect is already available
+  
+  ## Build connection to urbanpop.xlsx
+    my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
+  
+  ## List the sheets in my_book
+    getSheets(my_book)
+  
+  ## Import the second sheet in my_book
+    readWorksheet(my_book,2)
+  ## XLConnect is already available
+  
+  ## Build connection to urbanpop.xlsx
+    my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
+  
+  ## Add a worksheet to my_book, named "data_summary"
+    createSheet(my_book, "data_summary")
+  
+  ## Use getSheets() on my_book
+    getSheets(my_book)
+  ## XLConnect is already available
+  
+  ## Build connection to urbanpop.xlsx
+    my_book <- loadWorkbook("data_dcamp/urbanpop.xlsx")
+  
+  ## Add a worksheet to my_book, named "data_summary"
+    createSheet(my_book, "data_summary")
+  
+  ## Create data frame: summ
+    sheets <- getSheets(my_book)[1:3]
+    dims <- sapply(sheets, function(x) dim(readWorksheet(my_book, sheet = x)), USE.NAMES = FALSE)
+    summ <- data.frame(sheets = sheets,
+                     nrows = dims[1, ],
+                     ncols = dims[2, ])
+  
+  ## Add data in summ to "data_summary" sheet
+    getSheets(my_book)
+    writeWorksheet(my_book,summ, sheet = "data_summary")
+  
+  ## Save workbook as summary.xlsx
+    saveWorkbook(my_book,"data_dcamp/summary.xlsx")
+    loadWorkbook("data_dcamp/summary.xlsx")
+  ## my_book is available
+  
+  ## Rename "data_summary" sheet to "summary"
+    renameSheet(my_book, sheet = 4, "summary")
+  
+  ## Print out sheets of my_book
+    my_book
+    getSheets(my_book)
+  ## Save workbook to "renamed.xlsx"
+    saveWorkbook(my_book,"data_dcamp/renamed.xlsx")
+    loadWorkbook("data_dcamp/renamed.xlsx")
+  ## Load the XLConnect package
+    library(XLConnect)
+  
+  ## Build connection to renamed.xlsx: my_book
+    my_book <- loadWorkbook("data_dcamp/renamed.xlsx")
+  
+  ## Remove the fourth sheet
+    removeSheet(my_book,sheet = 4)
+  
+  ## Save workbook to "clean.xlsx"
+    saveWorkbook(my_book, "data_dcamp/clean.xlsx")
+    loadWorkbook("data_dcamp/clean.xlsx")
+  
+## EOF Importing data part 1
+    
+# ==== Importing Data in R (Part 2) ====
+  ##install.packages(c("RMySQL","DBI"))
+  ##install.packages("DBI")
+    library(RMySQL)
+  
+  ## Load the DBI package
+  
+  
+  ## Edit dbConnect() call
+    con <- dbConnect(RMySQL::MySQL(), 
+                     dbname = "classicmodels", 
+                     host = "127.0.0.1", 
+                     port = 3306,
+                     user = "root",
+                     password = "Rhodes@213")
+  ## if error do below in mysql
+  ## ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassowrd';
+    dbListTables(con)
+  ## Load the DBI package
+    library(DBI)
+  
+  ## Connect to the MySQL database: con
+    con <- dbConnect(RMySQL::MySQL(), 
+                   dbname = "classicmodels", 
+                   host = "127.0.0.1", 
+                   port = 3306,
+                   user = "root",
+                   password = "Rhodes@213")
+  
+  ## Import the products table from classicmodels db: products
+    products <- dbReadTable(con, "products")
+  
+  ## Print users
+    products
+  
+  ##
+    table_names <- dbListTables(con)
+    tables <- lapply(table_names, dbReadTable, conn = con)
+    tables
+  
+    productName <- dbGetQuery(con, "select productName from products where productCode = 'S10_2016' ")
+    productName
+  
+    productName <- dbGetQuery(con, "select productName from products where buyPrice > 50 ")
+    productName
+  
+    customerNumber <- dbGetQuery(con, "select customerNumber, contactLastName from customers where CHAR_LENGTH(contactLastName) > 4")
+  
+    customerNumber
+  
+  ## please note if both table in join has same named column it needs to prefix with table name
+  
+    dbGetQuery(con, "select customers.customerNumber, amount from payments INNER JOIN customers on customers.customerNumber = payments.customerNumber where city = 'NYC'")
+  
+  ## Send query to the database
+    dbGetQuery(con, "SELECT * FROM customers WHERE customerNumber > 200")
+    res <- dbSendQuery(con, "SELECT * FROM customers WHERE customerNumber > 200")
+  
+  ## Use dbFetch() twice
+    dbFetch(res,n = 2)
+    dbFetch(res)
+    
+  ## Clear res
+    dbClearResult(res)
+  
+  ## Create the data frame  long_name
+    long_name <- dbGetQuery(con, "select customerNumber, customerName from customers where char_length(customerName) > 10")
+  
+  ## Print long_name
+    print(long_name)
+  
+  ## Disconnect from the database
+    dbDisconnect(con)
+  
+  ## Load the readr package
+    library(readr)
+  
+  ## Import the csv file: pools
+    url_csv <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/swimming_pools.csv"
+    pools <- read_csv(url_csv)
+  
+  ## Import the txt file: potatoes
+    url_delim <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/potatoes.txt"
+    potatoes <- read.delim(url_delim)
+  
+  ## Print pools and potatoes
+    pools
+    potatoes
+  
+  ## https URL to the swimming_pools csv file.
+    url_csv <- "https://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/swimming_pools.csv"
+  
+  ## Import the file using read.csv(): pools1
+    pools1 <- read.csv(url_csv)
+  
+  ## Load the readr package
+    library(readr)
+  
+  ## Import the file using read_csv(): pools2
+    pools2 <- read_csv(url_csv)
+  
+  ## Print the structure of pools1 and pools2
+    str(pools1)
+    str(pools2)
+  
+  ## Load the readxl and gdata package
+    library(readxl)
+    library(gdata)
+  ## Specification of url: url_xls
+    url_xls <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/latitude.xls"
+  
+  ## Import the .xls file with gdata: excel_gdata
+    excel_gdata <- read.xls(url_xls)
+  
+  ## Download file behind URL, name it local_latitude.xls
+    download.file(url_xls,"data_dcamp/local_latitude.xls")
+  
+  ## Import the local .xls file with readxl: excel_readxl
+  
+  ## Load the readxl and gdata package
+    library(readxl)
+    library(gdata)
+  ## Specification of url: url_xls
+    url_xls <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/latitude.xls"
+  
+  ## Import the .xls file with gdata: excel_gdata
+    excel_gdata <- read.xls(url_xls)
+  
+  ## Download file behind URL, name it local_latitude.xls
+    download.file(url_xls,"data_dcamp/local_latitude.xls")
+  
+  ## Import the local .xls file with readxl: excel_readxl
+    excel_readxl <- read_excel("data_dcamp/local_latitude.xls")
+  
+  ## https URL to the wine RData file.
+  ##url_rdata <- "https://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/wine.RData"
+  
+  ## Download the wine file to your working directory
+  ##download.file(url_rdata,"data_dcamp/wine_local.RData")
+  
+  ## Load the wine data into your workspace using load()
+  ##load("wine_local.RData")
+  
+  ## Print out the summary of the wine data
+  ##summary(wine)
+  
+  ## Load the httr package
+    library(httr)
+  
+  ## Get the url, save response to resp
+    url <- "http://www.example.com/"
+    resp <- GET(url)
+  
+  ## Print resp
+    resp
+  
+  ## Get the raw content of resp: raw_content
+    raw_content <- content(resp, as = "raw")
+  
+  
+  ## Print the head of raw_content
+    head(raw_content)
+  
+  ## httr is already loaded
+    library(httr)
+  ## Get the url
+    url <- "http://www.omdbapi.com/?apikey=72bc447a&t=Annie+Hall&y=&plot=short&r=json"
+  
+  
+  ## Print resp
+    resp <- GET(url)
+  
+  ## Print content of resp as text
+    content(resp, as = "raw")
+  
+  ## Print content of resp
+    content(resp)
+  ## Load the jsonlite package
+    library(jsonlite)
+  
+  ## wine_json is a JSON
+    wine_json <- '{"name":"Chateau Migraine", "year":1997, "alcohol_pct":12.4, "color":"red", "awarded":false}'
+  
+  ## Convert wine_json into a list: wine
+    wine <- fromJSON(wine_json)
+  
+  ## Print structure of wine
+    str(wine)
+    wine
+  
+  ## jsonlite is preloaded
+  
+  ## Definition of quandl_url
+    quandl_url <- "https://www.quandl.com/api/v3/datasets/WIKI/FB/data.json?auth_token=i83asDsiWUUyfoypkgMz"
+  
+  ## Import Quandl data: quandl_data
+    quandl_data <- fromJSON(quandl_url)
+  
+  ## Print structure of quandl_data
+    str(quandl_data)
+    quandl_data
+  
+  ## The package jsonlite is already loaded
+  
+  ## Definition of the URLs
+    url_sw4 <- "http://www.omdbapi.com/?apikey=72bc447a&i=tt0076759&r=json"
+    url_sw3 <- "http://www.omdbapi.com/?apikey=72bc447a&i=tt0121766&r=json"
+  
+  ## Import two URLs with fromJSON(): sw4 and sw3
+    sw4 <- fromJSON(url_sw4)
+    sw3 <- fromJSON(url_sw3)
+  
+  ## Print out the Title element of both lists
+    sw4$Title
+    sw3$Title
+  
+  ## Is the release year of sw4 later than sw3?
+    sw4$Year > sw3$Year
+  
+  ## jsonlite is already loaded
+  
+  ## Challenge 1
+    json1 <- '[1, 2, 3, 4, 5, 6]'
+    fromJSON(json1)
+  
+  ## Challenge 2
+    json2 <- '{"a": [1, 2, 3], "b": [4, 5, 6]}'
+    fromJSON(json2)
+  
+  ## jsonlite is already loaded
+  
+  ## Challenge 1
+    json1 <- '[[1, 2], [3, 4]]'
+    fromJSON(json1)
+  
+  ## Challenge 2
+    json2 <- '[{"a": 1, "b": 2}, {"a": 3, "b": 4},{"a":5,"b":6}]'
+    fromJSON(json2)
+  
+  ## jsonlite is already loaded
+  
+  ## URL pointing to the .csv file
+    url_csv <- "http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/water.csv"
+  
+  ## Import the .csv file located at url_csv
+    water <- read.csv(url_csv, stringsAsFactors = FALSE )
+  
+  ## Convert the data file according to the requirements
+    water_json <- toJSON(water)
+  
+  ## Print out water_json
+    water_json
+  
+  ## jsonlite is already loaded
+  
+  ## Convert mtcars to a pretty JSON: pretty_json
+    pretty_json <- toJSON(mtcars, pretty = TRUE)
+  
+  ## Print pretty_json
+    pretty_json
+  
+  ## Minify pretty_json: mini_json
+    mini_json <- minify(pretty_json)
+  
+  ## Print mini_json
+    mini_json
+  
+  
+  ## Load the haven package
+    library(haven)
+  
+  ## Import sales.sas7bdat: sales
+    sales <- read_sas("data_dcamp/sales.sas7bdat")
+  
+  ## Display the structure of sales
+    str(sales)
+  ## haven is already loaded
+    library(haven)
+  ## Import the data from the URL: sugar
+    sugar = read_dta("http://assets.datacamp.com/production/course_1478/datasets/trade.dta")
+  
+  ## Structure of sugar
+    str(sugar)
+  
+  ## Convert values in Date column to dates
+    sugar$Date <- as.Date(as_factor(sugar$Date))
+  
+  ## Structure of sugar again
+    str(sugar)
+    library(ggplot2)
+    trade <- read_dta("http://assets.datacamp.com/production/course_1478/datasets/trade.dta")
+    trade
+    ggplot(trade, aes(x = trade$Weight_I, y = trade$Import)) + geom_point()
+  ## haven is already loaded
+  
+  ## Import person.sav: traits
+  
+    traits <- read_sav("data_dcamp/person.sav")
+  
+  ## Summarize traits
+    summary(traits)
+  
+  ## Print out a subset
+    subset(traits, Extroversion > 40 & Agreeableness > 40)
+  ## Load the foreign package
+    library(foreign)
+  
+  ## Import florida.dta and name the resulting data frame florida
+    florida <- read.dta("data_dcamp/florida.dta")
+  
+  ## Check tail() of florida
+    tail(florida)
+  ## foreign is already loaded
+  
+  ## Specify the file path using file.path(): path
+    path <- file.path("data_dcamp/edequality.dta")
+  
+  ## Create and print structure of edu_equal_1
+    edu_equal_1 <- read.dta(path)
+    str(edu_equal_1)
+  ## Create and print structure of edu_equal_2
+    edu_equal_2 <- read.dta(path, convert.factors = FALSE)
+    str(edu_equal_2)
+  
+  ## Create and print structure of edu_equal_3
+    edu_equal_3 <- read.dta(path, convert.underscore = TRUE)
+    str(edu_equal_3)
+  
+  ## You'll see that age is an integer, and literate is a factor, with the levels "yes" and "no". The following expression thus answers the question:
+  ## 
+  ## nrow(subset(edu_equal_1, age > 40 & literate == "yes"))
+  ## Up to you to answer a similar question now:
+  ## 
+  ## How many observations/individuals of Bulgarian ethnicity have an income above 1000?
+  
+    nrow(subset(edu_equal_1,ethnicity_head =="Bulgaria" & income > 1000))
+  ## foreign is already loaded
+  
+  ## Import international.sav as a data frame: demo
+    demo <- read.spss("data_dcamp/international.sav",to.data.frame = TRUE)
+    demo$gdp
+  ## Create boxplot of gdp variable of demo
+    boxplot(demo$gdp)
+    cor(demo$gdp,demo$f_illit)
+  ## foreign is already loaded
+  
+  ## Import international.sav as demo_1
+    demo_1 <- read.spss("data_dcamp/international.sav", to.data.frame = TRUE)
+  
+  ## Print out the head of demo_1
+    head(demo_1)
+  
+  ## Import international.sav as demo_2
+    demo_2 <- read.spss("data_dcamp/international.sav", to.data.frame = TRUE, as_factor=FALSE, use.value.labels = FALSE)
+  
+  ## Print out the head of demo_2
+    head(demo_2)
+
+## EOF Importing data part 2
+
+# ==== Cleansing Data in R ====
+  ## View the first 6 rows of data
+  ##head(weather)
+  
+  ## View the last 6 rows of data
+  ##tail(weather)
+  
+  ## View a condensed summary of the data
+  ##str(weather)
+  ## View the first 6 rows of data
+  ##head(weather_clean)
+  
+  ## View the last 6 rows of data
+  ##tail(weather_clean)
+  
+  ## View a condensed summary of the data
+  ##str(weather_clean)
+    library(dplyr)
+    world_bmi <- read.delim("data_bmi/NCD_RisC_Lancet_2017_BMI_age_standardised_world.txt", header = TRUE, sep=",")
+    world_bmi <- read.csv("data_bmi/BMI.csv")
+    world_bmi
+    class(world_bmi)
+    dim(world_bmi)
+    names(world_bmi)
+    str(world_bmi)
+    glimpse(world_bmi)
+    summary(world_bmi)
+  
+  ## plot
+    hist(world_bmi$Mean.BMI)
+    dim(world_bmi)
+    head(world_bmi, n = 6)
+    tail(world_bmi, n = 6)
+  ## Histogram of BMIs from 2008
+    hist(world_bmi$Mean.BMI)
+  
+  ## Scatter plot comparing BMIs from 1980 to those from 2008
+    plot(world_bmi$Mean.BMI, world_bmi$Mean.BMI)
+    library(tidyr)
+    world_bmi_kf_model <- spread(world_bmi,Year,Mean.BMI)
+    world_bmi_kf_model
+  
+    world_bmi_ac_model <- gather(world_bmi_kf_model,key = "Year", value = "Mean.BMI", -Country.Region.World,-Sex)
+    world_bmi_ac_model
+    country_bmi <- read.csv("data_bmi/BMI_Country.csv")
+    class(country_bmi)
+    dim(country_bmi)
+    str(country_bmi)
+    glimpse(country_bmi)
+    head(country_bmi)
+  
+  ## Apply separate() to bmi_cc
+    country_bmi_unite <- unite(country_bmi,Country_ISO,Country.Region.World,ISO)
+    head(country_bmi_unite)
+    country_bmi_separate <- separate(country_bmi_unite, col = Country_ISO, into = c("Country", "ISO"), sep = "_")
+  
+  ## Print the head of the result
+    head(country_bmi_separate)
+  
+  ## View the head of census
+    usa_census_sample <- read.csv("usa census sample/census-demo ex1.csv")
+    head(usa_census_sample)
+    str(usa_census_sample)
+  ## Gather the month columns
+    usa_census_sample_2 <- gather(usa_census_sample,Year,Pop,-ZCTA,-State,-Pop_Density)
+  
+  ## Arrange rows by YEAR using dplyr's arrange
+    usa_census_sample_clean <- separate(usa_census_sample_2,Year,into=c("Text","Year"),sep = "_")
+  
+    select(usa_census_sample_clean,-c(Text))
+  ## View first 20 rows of census2_arr
+    head(usa_census_sample_clean, n = 20)
+  ## View first 50 rows of census_long
+    head(usa_census_sample_clean, n = 50)
+  
+  ## Spread the type column
+    usa_census_sample_clean_2 <- spread(usa_census_sample_clean,Year,Pop)
+  
+  ## View first 20 rows of census_long2
+    head(usa_census_sample_clean_2,n = 20)
+    select(usa_census_sample_clean_2,-c(Text))
+  ## Make this evaluate to "character"
+    class("TRUE")
+  
+  ## Make this evaluate to "numeric"
+    class(8484.00)
+  
+  ## Make this evaluate to "integer"
+    class(99L)
+  
+  ## Make this evaluate to "factor"
+    class(factor("factor"))
+  
+  ## Make this evaluate to "logical"
+    class(FALSE)
+  ## Preview students with str()
+    students <- read.csv("Cleaning Data in R/Students.csv")
+    str(students)
+  
+  ## Coerce Grades to character
+    students$Grades <- as.character(students$Grades)
+  
+  ## Coerce Medu to factor
+    students$Medu <- as.factor(students$Medu)
+  
+  ## Coerce Fedu to factor
+    students$Fedu <- as.factor(students$Fedu)
+  
+  ## Look at students once more with str()
+    str(students)
+  ## Preview students2 with str()
+    students2 <- read.csv("Cleaning Data in R/Students2.csv")
+    str(students2)
+    head(students2)
+  ## Load the lubridate package
+    library(lubridate)
+  
+  ## Parse as date
+    dmy("17 Sep 2015")
+  
+  ## Parse as date and time (with no seconds!)
+    mdy_hm("July 15, 2012 12:56")
+  
+  ## Coerce dob to a date (with no time)
+    students2$dob <- dmy(students2$dob) 
+  
+  ## Coerce nurse_visit to a date and time
+    students2$nurse_visit <- ymd_hms(students2$nurse_visit)
+  
+  ## Look at students2 once more with str()
+    str(students2)
+ 
+  ## Load the stringr package
+    library(stringr)
+  
+  ## Trim all leading and trailing whitespace
+    str_trim(c("   Filip ", "Nick  ", " Jonathan"))
+  
+  ## Pad these strings with leading zeros
+    str_pad(c("23485W", "8823453Q", "994Z"),width = 9, side = "left", pad = "0")
+  ## Print state abbreviations
+    states <- read.csv("Cleaning Data in R/States.csv")
+  
+  ## Make states all uppercase and save result to states_upper
+    states_upper <- toupper(states)
+  
+  ## Make states_upper all lowercase again
+    tolower(states_upper)
+  ## Copy of students2: students3
+    students3 <- students2
+  
+  ## Look at the head of students3
+    head(students3)
+  
+  ## Detect all dates of birth (dob) in 1997
+    str_detect(students3$dob,"1997",negate = FALSE)
+  
+  ## In the sex column, replace "F" with "Female" ...
+    students3$sex <- str_replace(students3$sex, "F", "Female")
+  
+  ## ... and "M" with "Male"
+    students3$sex <- str_replace(students3$sex, "M", "Male")
+  
+  ## View the head of students3
+    head(students3)
+    social_df <- read.csv("Cleaning Data in R/social_df.csv", header = TRUE)
+    is.na(social_df)
+  
+  ## Call is.na() on the full social_df to spot all NAs
+    is.na(social_df)
+  
+  ## Use the any() function to ask whether there are any NAs in the data
+    any(is.na(social_df))
+  
+  ## View a summary() of the dataset
+    summary(social_df)
+  
+  ## Call table() on the status column
+    table(social_df$status)
+  # Replace all empty strings in status with NA
+    social_df$status[social_df$status == ""] <- NA
+  
+  ## Print social_df to the console
+    social_df
+  
+  ## Use complete.cases() to see which rows have no missing values
+    complete.cases(social_df)
+  
+  ## Use na.omit() to remove all rows with any missing values
+    na.omit(social_df)
+  
+  ## View a histogram of the age variable
+    students4 <- read.csv("Cleaning Data in R/students4.csv")
+    hist(students4$age)
+    head(students4)
+  ## View a histogram of the absences variable
+    hist(students4$absences)
+  
+  ## View a histogram of absences, but force zeros to be bucketed to the right of zero
+    hist(students4$absences)
+    hist(students4$absences,right = FALSE)
+  
+  ## View a boxplot of age
+    boxplot(students4$age)
+  
+  ## View a boxplot of absences
+    boxplot(students4$absences)
+    weather <- read.csv("Cleaning Data in R/Weather.csv")
+  ## Verify that weather is a data.frame
+    class(weather)
+  
+  ## Check the dimensions
+    dim(weather)
+  
+  ## View the column names
+    names(weather)
+  ## View the structure of the data
+    str(weather)
+  
+  ## Load dplyr package
+    library(dplyr)
+  
+  ## Look at the structure using dplyr's glimpse()
+    glimpse(weather)
+  
+  ## View a summary of the data
+    summary(weather)
+  ## View first 6 rows
+    head(weather, n = 6)
+  
+  ## View first 15 rows
+    head(weather, n = 15)
+  
+  ## View the last 6 rows
+    tail(weather, n  = 6)
+  
+  ## View the last 10 rows
+    tail(weather, n = 10)
+  ## Load the tidyr package
+    library(tidyr)
+  
+  ## Gather the columns
+    weather2 <- gather(weather, time, value, X1:X31, na.rm = TRUE)
+    write.csv(weather2,file = "Cleaning Data in R/weather2.csv")
+  ## View the head
+    head(weather2)
+  ## First remove column of row names
+    without_x <- weather2[, -1]
+    head(without_x)
+  ## Spread the data
+    weather3 <- spread(without_x, measure, value)
+  
+  ## View the head
+    str(weather3)
+    head(weather3)
+  
+  ## Load the stringr and lubridate packages
+    library(stringr)
+    library(lubridate)
+  
+    weather3 <-  separate(weather3,time,into=c("X","day"))
+  ## Remove X's from day column
+  
+    weather3$day <- str_replace(weather3$time,"X","")
+  
+  ## Unite the year, month, and day columns
+    weather4 <- unite(weather3, date, year, month, day, sep = "-")
+  
+  ## Convert date column to proper date format using lubridates's ymd()
+    weather4$date <- ymd(weather4$date)
+  
+  ## Rearrange columns using dplyr's select()
+    weather5 <- select(weather4, date, Events, CloudCover:WindDirDegrees)
+  
+  ## View the head of weather5
+    head(weather5)
+  ## View the structure of weather5
+    str(weather5)
+  
+  ## Examine the first 20 rows of weather5. Are most of the characters numeric?
+    head(weather5, n = 20)
+  
+  ## See what happens if we try to convert PrecipitationIn to numeric
+    as.numeric(weather5$PrecipitationIn)
+  ## Replace "T" with "0" (T = trace)
+    weather5$PrecipitationIn <- str_replace(weather5$PrecipitationIn,"T","0")
+  
+  ## Convert characters to numerics
+    weather6 <- mutate_at(weather5, vars(CloudCover:WindDirDegrees), funs(as.numeric))
+  
+  ## Look at result
+    str(weather6)
+  ## Count missing values
+    sum(is.na(weather6))
+  
+  ## Find missing values
+    summary(weather6)
+  
+  ## Find indices of NAs in Max.Gust.SpeedMPH
+    ind <- which(is.na(weather6$Max.Gust.SpeedMPH))
+  
+  ## Look at the full rows for records missing Max.Gust.SpeedMPH
+    weather6[ind, ]
+  ## Review distributions for all variables
+    summary(weather6)
+  
+  ## Find row with Max.Humidity of 1000
+    ind <- which(weather6$Max.Humidity == 1000)
+  
+  ## Look at the data for that day
+    weather6[ind, ]
+  
+  ## Change 1000 to 100
+    weather6$Max.Humidity[ind] <- 100
+  
+  ## Look at summary of Mean.VisibilityMiles
+    summary(weather6$Mean.VisibilityMiles)
+  
+  ## Get index of row with -1 value
+    ind <- which(weather6$Mean.VisibilityMiles == -1)
+  
+  ## Look at full row
+    weather6[ind,]
+  
+  ## Set Mean.VisibilityMiles to the appropriate value
+    weather6$Mean.VisibilityMiles[ind] <- 10
+  
+  ## Review summary of full data once more
+    summary(weather6)
+  
+  ## Look at histogram for MeanDew.PointF
+    hist(weather6$MeanDew.PointF)
+  
+  ## Look at histogram for Min.TemperatureF
+    hist(weather6$Min.TemperatureF)
+  
+  ## Compare to histogram for Mean.TemperatureF
+    hist(weather6$Mean.TemperatureF)
+  
+##EOF Cleansing data
+    
+# ==== Importing & Cleaning Data in R: Case Studies ====
+    sales <- read.csv("ImportingCleaningDatainRCaseStudies/Sales.csv", stringsAsFactors = FALSE)
+  ## View dimensions of sales
+    dim(sales)
+  
+  ## Inspect first 6 rows of sales
+    head(sales, n = 6)
+  
+  ## View column names of sales
+    names(sales)
+  
+  ## Look at structure of sales
+    str(sales)
+  
+  ## View a summary of sales
+    summary(sales)
+  
+  ## Load dplyr
+    library(dplyr)
+  
+  ## Get a glimpse of sales
+    glimpse(sales)
+  
+  ##sales2 <- sales[-(1:1),] #omit first from sales
+    sales2 <- sales[,-1]
+    glimpse(sales2)
+  
+    sales3 <- sales[,-4] # omit 4th column
+    glimpse(sales3)
+  
+  ## Define a vector of column indices: keep
+    keep <- c(5:(length(sales2)-15))
+  
+    dim(sales2)
+    class(keep)
+    dim(keep)
+    str(keep)
+  ## Subset sales2 using keep: sales3
+    sales3 = sales2[keep]
+    sales3
+    str(sales3)
+  
+  ## Load tidyr
+    library(tidyr)
+  
+  ## Split event_date_time: sales4
+    str(sales3)
+    sales4 <- separate(sales3, event_date_time,into=c("event_dt","event_time"), sep =" ")
+    head(sales4)
+  ## Split sales_ord_create_dttm: sales5
+    head(sales4$sales_ord_create_dttm)
+    sales5 <- separate(sales4, sales_ord_create_dttm,into=c("ord_create_dt","ord_create_time"), sep =" ")
+  
+  ## Define an issues vector
+    issues <- c(2516,3863,4082,4183)
+  
+  ## Print values of sales_ord_create_dttm at these indices
+    sales3$sales_ord_create_dttm[issues]
+  
+  ## Print a well-behaved value of sales_ord_create_dttm
+    sales3$sales_ord_create_dttm[2517]
+  ## Load stringr
+  library(stringr)
+  
+  ## Find columns of sales5 containing "dt": date_cols
+    date_cols <- str_detect(names(sales5), "dt")
+  
+  ## Load lubridate
+    library(lubridate)
+  
+  ## Coerce date columns into Date objects
+    sales5[, date_cols] <- lapply(sales5[, date_cols], ymd)
+  ## Find date columns (don't change)
+    date_cols <- str_detect(names(sales5), "dt")
+  
+  ## Create logical vectors indicating missing values (don't change)
+    missing <- lapply(sales5[, date_cols], is.na)
+    head(missing , n = 5)
+  ## Create a numerical vector that counts missing values: num_missing
+    num_missing <- sapply(missing, sum)
+  
+  ## Print num_missing
+    num_missing
+  ## Combine the venue_city and venue_state columns
+    sales6 <- unite(sales5, venue_city_state,venue_city, venue_state,sep = ", ")
+  
+  
+  ## View the head of sales6
+    head(sales6, n =6)
+## EOF Cleaning Data in R: Case Studies
